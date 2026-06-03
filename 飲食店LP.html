@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="炭火焼肉 和牛亭｜福岡市中央区のA5ランク黒毛和牛専門店。産地直送の極上和牛を個室で。接待・記念日に最適。">
+  <meta name="keywords" content="焼肉,和牛,A5,福岡,中央区,天神,個室,接待,記念日,産地直送">
+  <meta name="robots" content="index, follow">
+
+  <!-- OGP -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="炭火焼肉 和牛亭｜A5黒毛和牛・完全個室｜福岡市中央区">
+  <meta property="og:description" content="産地直送A5ランク黒毛和牛を炭火で。完全個室完備で接待・記念日に最適。福岡・天神駅徒歩3分。">
+  <meta property="og:image"       content="https://placehold.co/1200x630/1a1a1a/c9a84c?text=炭火焼肉+和牛亭">
+  <meta property="og:url"         content="https://wagyu-tei.example.com">
+  <meta property="og:site_name"   content="炭火焼肉 和牛亭">
+  <meta name="twitter:card"       content="summary_large_image">
+  <meta name="twitter:title"      content="炭火焼肉 和牛亭｜A5黒毛和牛・完全個室｜福岡市中央区">
+  <meta name="twitter:description" content="産地直送A5ランク黒毛和牛。完全個室で接待・記念日に最適。">
+  <meta name="twitter:image"      content="https://placehold.co/1200x630/1a1a1a/c9a84c?text=炭火焼肉+和牛亭">
+
+  <title>炭火焼肉 和牛亭｜A5黒毛和牛・完全個室｜福岡市中央区</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wagyu: {
+              black:   '#1a1a1a',
+              darker:  '#111111',
+              card:    '#242424',
+              border:  '#333333',
+              gold:    '#c9a84c',
+              'gold-light': '#e8c96a',
+              'gold-dark':  '#a07830',
+              text:    '#f0e8d8',
+              muted:   '#9a8870',
+              'muted-light': '#c8b898',
+            }
+          },
+          fontFamily: {
+            mincho: ['"游明朝"','"Yu Mincho"','"游明朝体"','YuMincho','"Hiragino Mincho ProN"','serif'],
+            gothic: ['"游ゴシック"','"Yu Gothic"','"游ゴシック体"','YuGothic','sans-serif'],
+          },
+          backgroundImage: {
+            'gold-gradient': 'linear-gradient(135deg, #c9a84c 0%, #e8c96a 50%, #a07830 100%)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: "游明朝","Yu Mincho","游明朝体",YuMincho,"Hiragino Mincho ProN",serif; background: #1a1a1a; color: #f0e8d8; }
+
+    /* ゴールドテキスト */
+    .text-gold { color: #c9a84c; }
+    .text-gold-light { color: #e8c96a; }
+
+    /* ゴールドグラデーションテキスト */
+    .gold-text-gradient {
+      background: linear-gradient(135deg, #c9a84c 0%, #e8c96a 50%, #a07830 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ゴールドボーダー装飾 */
+    .gold-border-bottom { border-bottom: 1px solid rgba(201,168,76,0.4); }
+    .gold-line { width: 48px; height: 1px; background: linear-gradient(to right, transparent, #c9a84c, transparent); margin: 0 auto; }
+
+    /* ヒーロー */
+    .hero-bg {
+      background-image:
+        linear-gradient(to bottom, rgba(26,26,26,0.2) 0%, rgba(26,26,26,0.7) 60%, rgba(26,26,26,1) 100%),
+        url('https://placehold.co/1600x1000/2a1a08/c9a84c?text=A5+黒毛和牛');
+      background-size: cover;
+      background-position: center;
+      min-height: 100svh;
+    }
+
+    /* カード */
+    .dark-card { background: #242424; border: 1px solid #333; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s; }
+    .dark-card:hover { border-color: #c9a84c; transform: translateY(-4px); box-shadow: 0 12px 40px rgba(201,168,76,0.15); }
+
+    /* コースカード highlight */
+    .course-featured { border: 1px solid #c9a84c; background: linear-gradient(145deg, #2a2218, #242424); }
+    .course-featured .course-badge { display: block; }
+
+    /* 炎アニメーション */
+    @keyframes flicker {
+      0%, 100% { opacity: 1; transform: scaleY(1); }
+      50%       { opacity: 0.8; transform: scaleY(0.95); }
+    }
+    .flame { animation: flicker 1.8s ease-in-out infinite; display: inline-block; }
+
+    /* 区切り装飾 */
+    .ornament::before, .ornament::after {
+      content: '─── ✦ ───';
+      color: #c9a84c;
+      opacity: 0.5;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+    }
+
+    /* グリッド写真 hover */
+    .photo-item { overflow: hidden; }
+    .photo-item img { transition: transform 0.5s ease; }
+    .photo-item:hover img { transform: scale(1.06); }
+    .photo-item .photo-overlay {
+      background: linear-gradient(to top, rgba(26,26,26,0.8) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .photo-item:hover .photo-overlay { opacity: 1; }
+
+    /* ナビ */
+    .nav-link { transition: color 0.2s; color: #c8b898; }
+    .nav-link:hover { color: #c9a84c; }
+
+    /* スクロールアニメーション */
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* 星 */
+    .star-gold { color: #c9a84c; }
+
+    /* 予約ボタン */
+    .btn-gold {
+      background: linear-gradient(135deg, #c9a84c 0%, #e8c96a 50%, #a07830 100%);
+      color: #1a1a1a;
+      font-weight: 800;
+      transition: opacity 0.25s, transform 0.2s, box-shadow 0.25s;
+    }
+    .btn-gold:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(201,168,76,0.4); }
+
+    .btn-outline-gold {
+      border: 1.5px solid #c9a84c;
+      color: #c9a84c;
+      transition: background 0.25s, color 0.25s;
+    }
+    .btn-outline-gold:hover { background: rgba(201,168,76,0.12); }
+
+    /* section bg alternate */
+    .bg-dark-alt { background: #111111; }
+  </style>
+</head>
+
+<body class="antialiased">
+
+<!-- ========== ナビゲーション ========== -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-wagyu-darker/90 backdrop-blur-md border-b border-wagyu-border">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <!-- ロゴ -->
+    <a href="#" class="flex flex-col leading-none">
+      <span class="text-xs text-wagyu-muted tracking-[0.25em] font-gothic">CHARCOAL YAKINIKU</span>
+      <span class="text-lg font-bold tracking-widest text-gold">炭火焼肉 和牛亭</span>
+    </a>
+    <!-- ナビ -->
+    <nav class="hidden md:flex gap-6 text-xs tracking-widest font-gothic">
+      <a href="#commitment" class="nav-link">こだわり</a>
+      <a href="#course"     class="nav-link">コース</a>
+      <a href="#menu"       class="nav-link">メニュー</a>
+      <a href="#room"       class="nav-link">個室</a>
+      <a href="#access"     class="nav-link">アクセス</a>
+    </nav>
+    <!-- CTAボタン -->
+    <a href="tel:0921234567"
+       class="btn-gold px-5 py-2 rounded-full text-xs tracking-widest font-gothic hidden sm:inline-block">
+      ご予約・お問い合わせ
+    </a>
+  </div>
+</header>
+
+
+<!-- ========== 1. ヒーロー ========== -->
+<section id="hero" class="hero-bg flex flex-col items-center justify-end pb-24 text-center px-4 relative">
+
+  <!-- 上部オーナメント -->
+  <div class="absolute top-24 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+    <span class="text-xs tracking-[0.4em] text-wagyu-muted font-gothic">FUKUOKA · CHUO-KU</span>
+    <div class="gold-line w-32"></div>
+  </div>
+
+  <div class="max-w-3xl mx-auto">
+    <!-- サブ -->
+    <p class="text-wagyu-muted text-xs tracking-[0.35em] mb-4 font-gothic">A5ランク 黒毛和牛 産地直送</p>
+
+    <!-- キャッチ -->
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-snug mb-6 text-wagyu-text drop-shadow-2xl">
+      至福の一皿を、<br><span class="gold-text-gradient">あなたに。</span>
+    </h1>
+
+    <p class="text-wagyu-muted-light text-sm sm:text-base mb-10 leading-relaxed max-w-lg mx-auto font-gothic">
+      炭火が奏でる黄金の焦がし目、舌の上でとける霜降り——<br>
+      特別な夜を、完全個室でご用意しております。
+    </p>
+
+    <!-- CTA -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="tel:0921234567"
+         class="btn-gold inline-flex items-center justify-center gap-2 px-10 py-4 rounded-full text-sm tracking-widest font-gothic">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.6.57 1 1 0 011 1V21a1 1 0 01-1 1C10.61 22 2 13.39 2 3a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.6 1 1 0 01-.24 1.01z"/>
+        </svg>
+        お電話で予約
+      </a>
+      <a href="#course"
+         class="btn-outline-gold inline-flex items-center justify-center gap-2 px-10 py-4 rounded-full text-sm tracking-widest font-gothic">
+        コースを見る
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </a>
+    </div>
+
+    <!-- バッジ行 -->
+    <div class="flex flex-wrap justify-center gap-4 mt-10 text-wagyu-muted font-gothic text-xs tracking-widest">
+      <span class="border border-wagyu-gold/40 px-4 py-1.5 rounded-full">🏆 A5ランク黒毛和牛</span>
+      <span class="border border-wagyu-gold/40 px-4 py-1.5 rounded-full">🔥 産地直送</span>
+      <span class="border border-wagyu-gold/40 px-4 py-1.5 rounded-full">🚪 完全個室完備</span>
+      <span class="border border-wagyu-gold/40 px-4 py-1.5 rounded-full">🎂 記念日・接待</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 2. こだわり ========== -->
+<section id="commitment" class="py-24 px-4 bg-dark-alt">
+  <div class="max-w-5xl mx-auto text-center">
+    <p class="text-wagyu-gold text-xs tracking-[0.4em] mb-3 font-gothic">OUR COMMITMENT</p>
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4">和牛亭、三つのこだわり</h2>
+    <div class="gold-line w-40 mt-2 mb-16"></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- こだわり1 -->
+      <div class="dark-card rounded-2xl p-8 flex flex-col items-center text-center fade-up">
+        <div class="w-20 h-20 rounded-full border border-wagyu-gold/50 flex items-center justify-center text-4xl mb-6 bg-wagyu-black">
+          <span class="flame">🔥</span>
+        </div>
+        <h3 class="text-wagyu-gold text-lg font-bold mb-1 tracking-wide">極上の肉質</h3>
+        <p class="text-wagyu-muted text-xs tracking-widest mb-4 font-gothic">FINEST QUALITY</p>
+        <div class="gold-line w-16 mb-4"></div>
+        <p class="text-wagyu-muted-light text-sm leading-relaxed font-gothic">
+          鹿児島・宮崎産のA5ランク黒毛和牛を産地直送。霜降り・赤身それぞれの旨みを最大限に引き出す炭火で、五感に響く至高の一皿をご提供します。
+        </p>
+      </div>
+
+      <!-- こだわり2 -->
+      <div class="dark-card rounded-2xl p-8 flex flex-col items-center text-center fade-up" style="transition-delay:.12s">
+        <div class="w-20 h-20 rounded-full border border-wagyu-gold/50 flex items-center justify-center text-4xl mb-6 bg-wagyu-black">
+          🚪
+        </div>
+        <h3 class="text-wagyu-gold text-lg font-bold mb-1 tracking-wide">洗練された空間</h3>
+        <p class="text-wagyu-muted text-xs tracking-widest mb-4 font-gothic">REFINED SPACE</p>
+        <div class="gold-line w-16 mb-4"></div>
+        <p class="text-wagyu-muted-light text-sm leading-relaxed font-gothic">
+          全席完全個室。大切なお取引先との接待から、家族の記念日まで。和モダンの落ち着いた空間で、時間を忘れてお食事をお楽しみいただけます。
+        </p>
+      </div>
+
+      <!-- こだわり3 -->
+      <div class="dark-card rounded-2xl p-8 flex flex-col items-center text-center fade-up" style="transition-delay:.24s">
+        <div class="w-20 h-20 rounded-full border border-wagyu-gold/50 flex items-center justify-center text-4xl mb-6 bg-wagyu-black">
+          🍶
+        </div>
+        <h3 class="text-wagyu-gold text-lg font-bold mb-1 tracking-wide">心尽くしのおもてなし</h3>
+        <p class="text-wagyu-muted text-xs tracking-widest mb-4 font-gothic">HEARTFELT SERVICE</p>
+        <div class="gold-line w-16 mb-4"></div>
+        <p class="text-wagyu-muted-light text-sm leading-relaxed font-gothic">
+          記念日サプライズプレートや花束のご手配、ウェルカムドリンクなど、特別な夜を彩るおもてなしを承ります。事前にご相談ください。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 3. おすすめコース ========== -->
+<section id="course" class="py-24 px-4 bg-wagyu-black">
+  <div class="max-w-5xl mx-auto text-center">
+    <p class="text-wagyu-gold text-xs tracking-[0.4em] mb-3 font-gothic">COURSE MENU</p>
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4">おすすめコース</h2>
+    <div class="gold-line w-40 mt-2 mb-5"></div>
+    <p class="text-wagyu-muted font-gothic text-sm mb-14">すべてのコースは2名様より承ります。料金はお1人様税込価格です。</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- コース1 -->
+      <div class="dark-card rounded-2xl overflow-hidden flex flex-col fade-up">
+        <div class="relative">
+          <img src="https://placehold.co/480x280/2a1e0e/c9a84c?text=極上コース" alt="極上コース" class="w-full aspect-video object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-wagyu-black/70 to-transparent"></div>
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <p class="text-wagyu-muted text-xs tracking-widest mb-1 font-gothic">STANDARD</p>
+          <h3 class="text-xl font-bold text-wagyu-text mb-2">極上コース</h3>
+          <div class="gold-line w-12 mb-4" style="margin:0 0 1rem 0"></div>
+          <ul class="text-wagyu-muted font-gothic text-xs space-y-1.5 mb-6 text-left flex-1">
+            <li class="flex gap-2"><span class="text-wagyu-gold">▸</span>前菜盛り合わせ</li>
+            <li class="flex gap-2"><span class="text-wagyu-gold">▸</span>黒毛和牛 厳選5種</li>
+            <li class="flex gap-2"><span class="text-wagyu-gold">▸</span>冷麺 or ご飯セット</li>
+            <li class="flex gap-2"><span class="text-wagyu-gold">▸</span>デザート</li>
+          </ul>
+          <div class="mt-auto">
+            <p class="text-wagyu-muted-light text-xs font-gothic mb-1">お1人様（税込）</p>
+            <p class="text-3xl font-bold text-wagyu-gold">¥8,800</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- コース2 (Featured) -->
+      <div class="course-featured rounded-2xl overflow-hidden flex flex-col relative fade-up" style="transition-delay:.12s">
+        <!-- 人気バッジ -->
+        <div class="absolute top-4 right-4 z-10 bg-wagyu-gold text-wagyu-black text-xs font-bold px-3 py-1 rounded-full tracking-wide font-gothic">
+          人気No.1
+        </div>
+        <div class="relative">
+          <img src="https://placehold.co/480x280/2a1500/c9a84c?text=霜降りプレミアム" alt="霜降りプレミアムコース" class="w-full aspect-video object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-wagyu-black/70 to-transparent"></div>
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <p class="text-wagyu-gold text-xs tracking-widest mb-1 font-gothic">PREMIUM</p>
+          <h3 class="text-xl font-bold text-wagyu-text mb-2">霜降りプレミアムコース</h3>
+          <div class="gold-line w-12 mb-4" style="margin:0 0 1rem 0"></div>
+          <ul class="text-wagyu-muted font-gothic text-xs space-y-1.5 mb-6 text-left flex-1">
+            <li class="flex gap-2"><span class="text-wagyu-gold">▸</span>前菜 · サラダ · 冷製スープ</li>
+            <li class="flex gap-2"><span class="text-wagyu-gold">▸</span>A5霜降り 厳選7種</li>
+            <li class="flex gap-2"><span class="text-wagyu-gold">▸</span>海鮮盛り合わせ</li>
+            <li class="flex gap-2"><span class="text-wagyu-gold">▸</span>ビビンバ · スープ</li>
+            <li class="flex gap-2"><span class="text-wagyu-gold">▸</span>デザート（季節もの）</li>
+          </ul>
+          <div class="mt-auto">
+            <p class="text-wagyu-muted-light text-xs font-gothic mb-1">お1人様（税込）</p>
+            <p class="text-3xl font-bold text-wagyu-gold">¥13,200</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- コース3 -->
+      <div class="dark-card rounded-2xl overflow-hidden flex flex-col fade-up" style="transition-delay:.24s">
+        <div class="relative">
+          <img src="https://placehold.co/480x280/1a0e00/c9a84c?text=極みシェフズ" alt="極みシェフズコース" class="w-full aspect-video object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-wagyu-black/70 to-transparent"></div>
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <p class="text-wagyu-muted text-xs tracking-widest mb-1 font-gothic">LUXE</p>
+          <h3 class="text-xl font-bold text-wagyu-text mb-2">極みシェフズコース</h3>
+          <div class="gold-line w-12 mb-4" style="margin:0 0 1rem 0"></div>
+          <ul class="text-wagyu-muted font-gothic text-xs space-y-1.5 mb-6 text-left flex-1">
+            <li class="flex gap-2"><span class="text-wagyu-gold">▸</span>前菜 · フォアグラ · 雲丹</li>
+            <li class="flex gap-2"><span class="text-wagyu-gold">▸</span>A5最上ロース・フィレ etc.</li>
+            <li class="flex gap-2"><span class="text-wagyu-gold">▸</span>鮑の炭火焼き</li>
+            <li class="flex gap-2"><span class="text-wagyu-gold">▸</span>和牛シャトーブリアン</li>
+            <li class="flex gap-2"><span class="text-wagyu-gold">▸</span>〆 · スペシャルデザート</li>
+          </ul>
+          <div class="mt-auto">
+            <p class="text-wagyu-muted-light text-xs font-gothic mb-1">お1人様（税込）</p>
+            <p class="text-3xl font-bold text-wagyu-gold">¥19,800</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="text-wagyu-muted font-gothic text-xs mt-8">※ 仕入れ状況により内容が変わる場合がございます。アレルギーのある方はご予約時にお申し出ください。</p>
+
+    <a href="tel:0921234567"
+       class="btn-gold inline-flex items-center gap-2 mt-10 px-10 py-4 rounded-full text-sm tracking-widest font-gothic">
+      コースのご予約はこちら →
+    </a>
+  </div>
+</section>
+
+
+<!-- ========== 4. メニューハイライト ========== -->
+<section id="menu" class="py-24 px-4 bg-dark-alt">
+  <div class="max-w-5xl mx-auto text-center">
+    <p class="text-wagyu-gold text-xs tracking-[0.4em] mb-3 font-gothic">MENU HIGHLIGHT</p>
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4">メニューハイライト</h2>
+    <div class="gold-line w-40 mt-2 mb-16"></div>
+
+    <!-- 2列 × 3行 グリッド -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+
+      <!-- 1 -->
+      <div class="photo-item relative rounded-xl overflow-hidden aspect-square cursor-pointer fade-up">
+        <img src="https://placehold.co/480x480/2a1500/c9a84c?text=和牛ロース" alt="A5和牛ロース" class="w-full h-full object-cover">
+        <div class="photo-overlay absolute inset-0 flex items-end p-4">
+          <p class="text-wagyu-text text-sm font-bold tracking-wide">A5和牛ロース</p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="photo-item relative rounded-xl overflow-hidden aspect-square cursor-pointer fade-up" style="transition-delay:.06s">
+        <img src="https://placehold.co/480x480/201008/c9a84c?text=シャトーブリアン" alt="シャトーブリアン" class="w-full h-full object-cover">
+        <div class="photo-overlay absolute inset-0 flex items-end p-4">
+          <p class="text-wagyu-text text-sm font-bold tracking-wide">シャトーブリアン</p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="photo-item relative rounded-xl overflow-hidden aspect-square cursor-pointer fade-up" style="transition-delay:.12s">
+        <img src="https://placehold.co/480x480/1e1408/c9a84c?text=特上カルビ" alt="特上カルビ" class="w-full h-full object-cover">
+        <div class="photo-overlay absolute inset-0 flex items-end p-4">
+          <p class="text-wagyu-text text-sm font-bold tracking-wide">特上カルビ</p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="photo-item relative rounded-xl overflow-hidden aspect-square cursor-pointer fade-up" style="transition-delay:.08s">
+        <img src="https://placehold.co/480x480/241010/c9a84c?text=タン元塩" alt="タン元塩" class="w-full h-full object-cover">
+        <div class="photo-overlay absolute inset-0 flex items-end p-4">
+          <p class="text-wagyu-text text-sm font-bold tracking-wide">タン元 塩</p>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="photo-item relative rounded-xl overflow-hidden aspect-square cursor-pointer fade-up" style="transition-delay:.14s">
+        <img src="https://placehold.co/480x480/1a1a10/c9a84c?text=鮑の炭火焼き" alt="鮑の炭火焼き" class="w-full h-full object-cover">
+        <div class="photo-overlay absolute inset-0 flex items-end p-4">
+          <p class="text-wagyu-text text-sm font-bold tracking-wide">鮑の炭火焼き</p>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="photo-item relative rounded-xl overflow-hidden aspect-square cursor-pointer fade-up" style="transition-delay:.2s">
+        <img src="https://placehold.co/480x480/2a2008/c9a84c?text=デザート" alt="季節のデザート" class="w-full h-full object-cover">
+        <div class="photo-overlay absolute inset-0 flex items-end p-4">
+          <p class="text-wagyu-text text-sm font-bold tracking-wide">季節のデザート</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="text-wagyu-muted font-gothic text-xs mt-6">※ メニューは季節・仕入れにより変更になる場合がございます。</p>
+  </div>
+</section>
+
+
+<!-- ========== 5. 個室紹介 ========== -->
+<section id="room" class="py-24 px-4 bg-wagyu-black">
+  <div class="max-w-5xl mx-auto text-center">
+    <p class="text-wagyu-gold text-xs tracking-[0.4em] mb-3 font-gothic">PRIVATE ROOM</p>
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4">完全個室のご案内</h2>
+    <div class="gold-line w-40 mt-2 mb-5"></div>
+    <p class="text-wagyu-muted font-gothic text-sm mb-14">全室完全個室。接待・記念日・家族のお祝いなど、大切なシーンに合わせた空間をご用意しています。</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- 2名用 -->
+      <div class="dark-card rounded-2xl overflow-hidden flex flex-col fade-up">
+        <div class="relative">
+          <img src="https://placehold.co/480x300/1e1a14/c9a84c?text=2名用+個室" alt="2名用個室" class="w-full aspect-[16/10] object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-wagyu-black/50 to-transparent"></div>
+          <div class="absolute bottom-3 left-4">
+            <span class="bg-wagyu-gold/90 text-wagyu-black text-xs font-bold px-3 py-1 rounded-full font-gothic">2名様専用</span>
+          </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-lg font-bold text-wagyu-text mb-1">桜の間</h3>
+          <p class="text-wagyu-muted text-xs font-gothic mb-4 tracking-wide">— SAKURA ROOM —</p>
+          <p class="text-wagyu-muted font-gothic text-sm leading-relaxed flex-1">
+            カップルや夫婦のアニバーサリーに最適な2名専用の特別室。間接照明と坪庭の緑が演出するロマンティックな空間です。
+          </p>
+          <div class="mt-5 border-t border-wagyu-border pt-4 grid grid-cols-2 gap-3 text-xs font-gothic text-wagyu-muted">
+            <div class="flex gap-1.5 items-center"><span class="text-wagyu-gold">✦</span>完全個室</div>
+            <div class="flex gap-1.5 items-center"><span class="text-wagyu-gold">✦</span>坪庭ビュー</div>
+            <div class="flex gap-1.5 items-center"><span class="text-wagyu-gold">✦</span>記念日演出可</div>
+            <div class="flex gap-1.5 items-center"><span class="text-wagyu-gold">✦</span>個室料：¥3,300</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4名用 -->
+      <div class="dark-card rounded-2xl overflow-hidden flex flex-col fade-up" style="transition-delay:.12s">
+        <div class="relative">
+          <img src="https://placehold.co/480x300/1a1810/c9a84c?text=4名用+個室" alt="4名用個室" class="w-full aspect-[16/10] object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-wagyu-black/50 to-transparent"></div>
+          <div class="absolute bottom-3 left-4">
+            <span class="bg-wagyu-gold/90 text-wagyu-black text-xs font-bold px-3 py-1 rounded-full font-gothic">4名様用</span>
+          </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-lg font-bold text-wagyu-text mb-1">竹の間</h3>
+          <p class="text-wagyu-muted text-xs font-gothic mb-4 tracking-wide">— TAKE ROOM —</p>
+          <p class="text-wagyu-muted font-gothic text-sm leading-relaxed flex-1">
+            ビジネス接待・家族のお祝いに人気の4名用個室。掘りごたつ式で足を伸ばしてゆっくりとお過ごしいただけます。
+          </p>
+          <div class="mt-5 border-t border-wagyu-border pt-4 grid grid-cols-2 gap-3 text-xs font-gothic text-wagyu-muted">
+            <div class="flex gap-1.5 items-center"><span class="text-wagyu-gold">✦</span>掘りごたつ</div>
+            <div class="flex gap-1.5 items-center"><span class="text-wagyu-gold">✦</span>プロジェクター</div>
+            <div class="flex gap-1.5 items-center"><span class="text-wagyu-gold">✦</span>接待に最適</div>
+            <div class="flex gap-1.5 items-center"><span class="text-wagyu-gold">✦</span>個室料：¥5,500</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8名用 -->
+      <div class="dark-card rounded-2xl overflow-hidden flex flex-col fade-up" style="transition-delay:.24s">
+        <div class="relative">
+          <img src="https://placehold.co/480x300/181614/c9a84c?text=8名用+個室" alt="8名用個室" class="w-full aspect-[16/10] object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-wagyu-black/50 to-transparent"></div>
+          <div class="absolute bottom-3 left-4">
+            <span class="bg-wagyu-gold/90 text-wagyu-black text-xs font-bold px-3 py-1 rounded-full font-gothic">最大8名様</span>
+          </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="text-lg font-bold text-wagyu-text mb-1">松の間</h3>
+          <p class="text-wagyu-muted text-xs font-gothic mb-4 tracking-wide">— MATSU ROOM —</p>
+          <p class="text-wagyu-muted font-gothic text-sm leading-relaxed flex-1">
+            会社の宴会・グループ接待・同窓会など、大人数でのご宴会に対応。音響設備も完備しており、プレミアムパーティーとしてもご活用いただけます。
+          </p>
+          <div class="mt-5 border-t border-wagyu-border pt-4 grid grid-cols-2 gap-3 text-xs font-gothic text-wagyu-muted">
+            <div class="flex gap-1.5 items-center"><span class="text-wagyu-gold">✦</span>最大8名</div>
+            <div class="flex gap-1.5 items-center"><span class="text-wagyu-gold">✦</span>音響設備</div>
+            <div class="flex gap-1.5 items-center"><span class="text-wagyu-gold">✦</span>大型プロジェクター</div>
+            <div class="flex gap-1.5 items-center"><span class="text-wagyu-gold">✦</span>個室料：¥8,800</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="text-wagyu-muted font-gothic text-xs mt-8">※ 個室のご利用はご予約時にお申し付けください。個室料は室料のみの価格です。</p>
+  </div>
+</section>
+
+
+<!-- ========== 6. お客様の声 ========== -->
+<section id="reviews" class="py-24 px-4 bg-dark-alt">
+  <div class="max-w-5xl mx-auto text-center">
+    <p class="text-wagyu-gold text-xs tracking-[0.4em] mb-3 font-gothic">GUEST REVIEWS</p>
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4">お客様の声</h2>
+    <div class="gold-line w-40 mt-2 mb-16"></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- レビュー1 -->
+      <div class="dark-card rounded-2xl p-8 flex flex-col text-left fade-up">
+        <div class="flex gap-1 star-gold text-base mb-4">★★★★★</div>
+        <p class="text-4xl text-wagyu-gold/30 font-bold leading-none mb-3">"</p>
+        <p class="text-wagyu-muted-light font-gothic text-sm leading-relaxed flex-1">
+          会社の大切な接待で利用しました。個室は落ち着いた雰囲気で、お肉の質・スタッフの対応すべてが一流。お取引先からも絶賛いただき、大成功の接待になりました。次回も必ず利用します。
+        </p>
+        <div class="mt-6 pt-6 border-t border-wagyu-border flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-wagyu-card border border-wagyu-gold/40 flex items-center justify-center text-wagyu-gold text-sm font-bold">K</div>
+          <div>
+            <p class="text-wagyu-text font-bold text-sm">K.T. 様</p>
+            <p class="text-wagyu-muted font-gothic text-xs">50代・会社役員・接待利用</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- レビュー2 -->
+      <div class="dark-card rounded-2xl p-8 flex flex-col text-left fade-up" style="transition-delay:.12s">
+        <div class="flex gap-1 star-gold text-base mb-4">★★★★★</div>
+        <p class="text-4xl text-wagyu-gold/30 font-bold leading-none mb-3">"</p>
+        <p class="text-wagyu-muted-light font-gothic text-sm leading-relaxed flex-1">
+          結婚記念日に「桜の間」を予約。サプライズのデザートプレートを事前にお願いしていたのですが、スタッフの方が素敵に演出してくださいました。妻がとても喜び、忘れられない夜になりました。
+        </p>
+        <div class="mt-6 pt-6 border-t border-wagyu-border flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-wagyu-card border border-wagyu-gold/40 flex items-center justify-center text-wagyu-gold text-sm font-bold">M</div>
+          <div>
+            <p class="text-wagyu-text font-bold text-sm">M.Y. 様</p>
+            <p class="text-wagyu-muted font-gothic text-xs">40代・会社員・記念日利用</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- レビュー3 -->
+      <div class="dark-card rounded-2xl p-8 flex flex-col text-left fade-up" style="transition-delay:.24s">
+        <div class="flex gap-1 star-gold text-base mb-4">★★★★★</div>
+        <p class="text-4xl text-wagyu-gold/30 font-bold leading-none mb-3">"</p>
+        <p class="text-wagyu-muted-light font-gothic text-sm leading-relaxed flex-1">
+          霜降りプレミアムコースを注文。シャトーブリアンの炭火焼きは今まで食べた中で一番感動しました。ソムリエの方がワインのペアリングも提案してくださり、料理がさらに引き立ちました。
+        </p>
+        <div class="mt-6 pt-6 border-t border-wagyu-border flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-wagyu-card border border-wagyu-gold/40 flex items-center justify-center text-wagyu-gold text-sm font-bold">S</div>
+          <div>
+            <p class="text-wagyu-text font-bold text-sm">S.H. 様</p>
+            <p class="text-wagyu-muted font-gothic text-xs">35代・経営者・グループ利用</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 7. アクセス・営業時間 ========== -->
+<section id="access" class="py-24 px-4 bg-wagyu-black">
+  <div class="max-w-5xl mx-auto text-center">
+    <p class="text-wagyu-gold text-xs tracking-[0.4em] mb-3 font-gothic">ACCESS & HOURS</p>
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4">アクセス・営業時間</h2>
+    <div class="gold-line w-40 mt-2 mb-16"></div>
+  </div>
+
+  <div class="max-w-5xl mx-auto flex flex-col lg:flex-row gap-8 fade-up">
+    <!-- 左: 店舗情報 -->
+    <div class="w-full lg:w-2/5 space-y-5">
+
+      <!-- 店舗情報カード -->
+      <div class="dark-card rounded-2xl p-7">
+        <h3 class="text-wagyu-gold font-bold text-sm tracking-widest mb-5 font-gothic flex items-center gap-2">
+          <span class="w-4 h-px bg-wagyu-gold inline-block"></span>店舗情報
+        </h3>
+        <dl class="space-y-3 text-sm font-gothic">
+          <div class="flex gap-4 items-start">
+            <dt class="text-wagyu-muted w-14 shrink-0">店名</dt>
+            <dd class="text-wagyu-text font-bold">炭火焼肉 和牛亭</dd>
+          </div>
+          <div class="flex gap-4 items-start">
+            <dt class="text-wagyu-muted w-14 shrink-0">住所</dt>
+            <dd class="text-wagyu-muted-light">〒810-0001<br>福岡県福岡市中央区天神1-2-3<br>和牛亭ビル B1F</dd>
+          </div>
+          <div class="flex gap-4 items-start">
+            <dt class="text-wagyu-muted w-14 shrink-0">電話</dt>
+            <dd><a href="tel:0921234567" class="text-wagyu-gold hover:text-wagyu-gold-light transition-colors font-bold">092-123-4567</a></dd>
+          </div>
+          <div class="flex gap-4 items-start">
+            <dt class="text-wagyu-muted w-14 shrink-0">交通</dt>
+            <dd class="text-wagyu-muted-light">地下鉄天神駅 徒歩3分<br>西鉄福岡（天神）駅 徒歩5分</dd>
+          </div>
+          <div class="flex gap-4 items-start">
+            <dt class="text-wagyu-muted w-14 shrink-0">駐車場</dt>
+            <dd class="text-wagyu-muted-light">
+              提携駐車場あり<br>
+              <span class="text-xs">（天神パーキング・3時間まで無料）</span>
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- 営業時間カード -->
+      <div class="dark-card rounded-2xl p-7">
+        <h3 class="text-wagyu-gold font-bold text-sm tracking-widest mb-5 font-gothic flex items-center gap-2">
+          <span class="w-4 h-px bg-wagyu-gold inline-block"></span>営業時間
+        </h3>
+        <div class="space-y-3 text-sm font-gothic">
+          <div class="flex justify-between items-center py-2.5 border-b border-wagyu-border">
+            <span class="text-wagyu-muted-light">月〜金</span>
+            <span class="text-wagyu-text font-medium">17:00 〜 23:30</span>
+          </div>
+          <div class="flex justify-between items-center py-2.5 border-b border-wagyu-border">
+            <span class="text-wagyu-muted-light">土・日・祝</span>
+            <span class="text-wagyu-text font-medium">12:00 〜 23:30</span>
+          </div>
+          <div class="flex justify-between items-center py-2.5 border-b border-wagyu-border">
+            <span class="text-wagyu-muted-light">ランチ（土日祝のみ）</span>
+            <span class="text-wagyu-text font-medium">12:00 〜 15:00</span>
+          </div>
+          <div class="flex justify-between items-center py-2.5">
+            <span class="text-wagyu-muted-light">定休日</span>
+            <span class="text-wagyu-gold font-medium">毎週月曜日</span>
+          </div>
+        </div>
+        <p class="text-wagyu-muted text-xs mt-4">※ 最終入店 22:00 / ラストオーダー 22:30</p>
+      </div>
+
+    </div>
+
+    <!-- 右: 地図 -->
+    <div class="w-full lg:w-3/5 flex flex-col">
+      <div class="rounded-2xl overflow-hidden border border-wagyu-border flex-1 min-h-64">
+        <img src="https://placehold.co/800x500/1e1e1e/c9a84c?text=Map+Area%0A(Google+Maps)" alt="地図" class="w-full h-full object-cover">
+      </div>
+      <p class="text-center text-wagyu-muted font-gothic text-xs mt-3">※ 実装時はGoogle Maps埋め込みに差し替えてください</p>
+
+      <!-- 駐車場情報 -->
+      <div class="dark-card rounded-2xl p-5 mt-4 font-gothic text-sm">
+        <h4 class="text-wagyu-gold text-xs tracking-widest mb-3 flex items-center gap-2">
+          <span class="w-4 h-px bg-wagyu-gold inline-block"></span>🚗 提携駐車場のご案内
+        </h4>
+        <div class="grid grid-cols-2 gap-3 text-xs text-wagyu-muted">
+          <div class="bg-wagyu-black rounded-xl p-3">
+            <p class="text-wagyu-muted-light font-bold mb-1">天神パーキング</p>
+            <p>徒歩2分・3時間無料</p>
+          </div>
+          <div class="bg-wagyu-black rounded-xl p-3">
+            <p class="text-wagyu-muted-light font-bold mb-1">中央区市営駐車場</p>
+            <p>徒歩3分・2時間無料</p>
+          </div>
+        </div>
+        <p class="text-wagyu-muted text-xs mt-3">お帰り際にスタッフへ駐車券をご提示ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 8. 予約CTA ========== -->
+<section id="cta" class="py-28 px-4 relative overflow-hidden">
+  <!-- 背景 -->
+  <div class="absolute inset-0 bg-gradient-to-br from-wagyu-darker via-wagyu-black to-[#1a1200]"></div>
+  <!-- 装飾ライン -->
+  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-wagyu-gold to-transparent opacity-50"></div>
+  <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-wagyu-gold to-transparent opacity-50"></div>
+
+  <div class="relative max-w-2xl mx-auto text-center fade-up">
+    <p class="text-wagyu-gold text-xs tracking-[0.5em] mb-4 font-gothic">RESERVATION</p>
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-wagyu-text">
+      特別な夜を、<span class="gold-text-gradient">ご予約ください。</span>
+    </h2>
+    <div class="gold-line w-40 mb-6"></div>
+    <p class="text-wagyu-muted font-gothic text-sm leading-relaxed mb-4">
+      ご予約・お問い合わせはお電話またはネット予約より承っております。<br>
+      記念日・接待のご要望はご予約時にお気軽にお申し付けください。
+    </p>
+
+    <!-- 注意書き -->
+    <div class="border border-wagyu-gold/30 bg-wagyu-gold/5 rounded-xl px-6 py-4 mb-10 font-gothic text-xs text-wagyu-muted flex flex-col sm:flex-row gap-3 justify-center">
+      <span>🎂 記念日演出承ります</span>
+      <span class="hidden sm:inline text-wagyu-border">|</span>
+      <span>🍾 ワインリストあり</span>
+      <span class="hidden sm:inline text-wagyu-border">|</span>
+      <span>🌸 アレルギー対応可</span>
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-5 justify-center">
+      <!-- 電話 -->
+      <a href="tel:0921234567"
+         class="btn-gold inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full text-sm tracking-widest font-gothic font-black">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.6.57 1 1 0 011 1V21a1 1 0 01-1 1C10.61 22 2 13.39 2 3a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.6 1 1 0 01-.24 1.01z"/>
+        </svg>
+        <span class="text-left leading-snug">お電話でご予約<br><span class="font-normal text-xs opacity-80">092-123-4567</span></span>
+      </a>
+      <!-- ネット予約 -->
+      <a href="#"
+         class="btn-outline-gold inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full text-sm tracking-widest font-gothic font-bold">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        <span class="text-left leading-snug">ネットで予約<br><span class="font-normal text-xs opacity-70">24時間受付</span></span>
+      </a>
+    </div>
+
+    <p class="text-wagyu-muted font-gothic text-xs mt-8">電話受付：17:00〜22:30（月曜定休）</p>
+  </div>
+</section>
+
+
+<!-- ========== フッター ========== -->
+<footer class="bg-wagyu-darker border-t border-wagyu-border py-12 px-4 text-center font-gothic">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex flex-col items-center gap-2 mb-6">
+      <span class="text-xs tracking-[0.35em] text-wagyu-muted">CHARCOAL YAKINIKU</span>
+      <span class="text-xl font-bold tracking-widest text-wagyu-gold">炭火焼肉 和牛亭</span>
+    </div>
+    <div class="gold-line w-32 mb-6"></div>
+    <p class="text-wagyu-muted text-xs mb-6">〒810-0001 福岡県福岡市中央区天神1-2-3 和牛亭ビル B1F　TEL: 092-123-4567</p>
+    <nav class="flex flex-wrap justify-center gap-5 text-xs text-wagyu-muted mb-8">
+      <a href="#commitment" class="hover:text-wagyu-gold transition-colors">こだわり</a>
+      <a href="#course"     class="hover:text-wagyu-gold transition-colors">コース</a>
+      <a href="#menu"       class="hover:text-wagyu-gold transition-colors">メニュー</a>
+      <a href="#room"       class="hover:text-wagyu-gold transition-colors">個室</a>
+      <a href="#reviews"    class="hover:text-wagyu-gold transition-colors">お客様の声</a>
+      <a href="#access"     class="hover:text-wagyu-gold transition-colors">アクセス</a>
+      <a href="#cta"        class="hover:text-wagyu-gold transition-colors">ご予約</a>
+    </nav>
+    <p class="text-wagyu-muted/50 text-xs">&copy; 2024 炭火焼肉 和牛亭. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+<!-- ========== JavaScript ========== -->
+<script>
+  // スクロールフェードイン
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

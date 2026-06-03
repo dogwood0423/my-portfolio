@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="さくら整骨院｜大阪市北区の交通事故・むちうち専門整骨院。自賠責保険対応で自己負担0円。梅田駅から徒歩5分。">
+  <meta name="keywords" content="整骨院,交通事故,むちうち,大阪,北区,梅田,自賠責保険,自己負担0円">
+  <meta name="robots" content="index, follow">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="さくら整骨院｜交通事故・むちうち専門｜大阪市北区">
+  <meta property="og:description" content="交通事故後の痛みに悩む方へ。自賠責保険対応で自己負担0円。大阪市北区・梅田駅徒歩5分の交通事故専門整骨院。">
+  <meta property="og:image" content="https://placehold.co/1200x630/2d8a6e/ffffff?text=さくら整骨院">
+  <meta property="og:url" content="https://sakura-seikotsu.example.com">
+  <meta property="og:site_name" content="さくら整骨院">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="さくら整骨院｜交通事故・むちうち専門｜大阪市北区">
+  <meta name="twitter:description" content="自賠責保険対応で自己負担0円。大阪市北区・梅田駅徒歩5分。">
+  <meta name="twitter:image" content="https://placehold.co/1200x630/2d8a6e/ffffff?text=さくら整骨院">
+
+  <title>さくら整骨院｜交通事故・むちうち専門｜大阪市北区梅田</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sakura: {
+              green:    '#2d8a6e',
+              dark:     '#1f6351',
+              light:    '#e8f5f1',
+              pale:     '#f0faf6',
+              accent:   '#f97316',
+              gold:     '#d97706',
+              text:     '#1a2e28',
+              muted:    '#5a7a72',
+              border:   '#b8ddd4',
+            }
+          },
+          fontFamily: {
+            gothic: ['"游ゴシック"','"Yu Gothic"','"游ゴシック体"','YuGothic','sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: "游ゴシック","Yu Gothic","游ゴシック体",YuGothic,sans-serif; color: #1a2e28; background: #fff; }
+
+    /* ナビ */
+    .nav-link { transition: color 0.2s; }
+    .nav-link:hover { color: #2d8a6e; }
+
+    /* ヒーロー */
+    .hero-bg {
+      background-image: linear-gradient(135deg, rgba(29,80,63,0.88) 0%, rgba(45,138,110,0.75) 60%, rgba(29,80,63,0.82) 100%),
+                        url('https://placehold.co/1600x900/1d503f/a8d8c8?text=さくら整骨院');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* pulse */
+    @keyframes pulse-ring {
+      0%   { transform: scale(1); opacity: 0.7; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+    .pulse-ring::before {
+      content: '';
+      position: absolute; inset: -8px;
+      border-radius: 9999px;
+      background: rgba(249,115,22,0.4);
+      animation: pulse-ring 1.8s ease-out infinite;
+    }
+
+    /* ステップコネクター */
+    .step-line { position: relative; }
+    .step-line::after {
+      content: '';
+      position: absolute;
+      left: 50%; top: 100%;
+      transform: translateX(-50%);
+      width: 2px; height: 32px;
+      background: linear-gradient(to bottom, #2d8a6e, transparent);
+    }
+
+    /* カード hover */
+    .card-hover { transition: transform 0.25s, box-shadow 0.25s; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(45,138,110,0.15); }
+
+    /* FAQ accordion */
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-answer.open { max-height: 400px; }
+    .faq-icon { transition: transform 0.3s; }
+    .faq-icon.open { transform: rotate(45deg); }
+
+    /* テーブル */
+    .hour-table th { background: #2d8a6e; color: #fff; }
+    .hour-table td { border: 1px solid #b8ddd4; }
+    .hour-table tr:nth-child(even) td { background: #f0faf6; }
+
+    /* アニメ */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* 0円強調 */
+    .zero-badge {
+      background: linear-gradient(135deg, #f97316, #d97706);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 900;
+      border-radius: 9999px;
+      padding: 0.25rem 1rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+
+<!-- ========== ナビゲーション ========== -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-sakura-border">
+  <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2">
+      <span class="text-sakura-green text-xl">🌸</span>
+      <span class="text-lg font-bold tracking-wide text-sakura-text">さくら整骨院</span>
+    </a>
+    <nav class="hidden md:flex gap-6 text-sm text-sakura-text">
+      <a href="#symptoms" class="nav-link">症状</a>
+      <a href="#reasons"  class="nav-link">選ばれる理由</a>
+      <a href="#flow"     class="nav-link">施術の流れ</a>
+      <a href="#price"    class="nav-link">料金</a>
+      <a href="#faq"      class="nav-link">よくある質問</a>
+      <a href="#access"   class="nav-link">アクセス</a>
+    </nav>
+    <a href="tel:0612345678"
+       class="relative pulse-ring bg-sakura-accent hover:bg-orange-600 text-white px-5 py-2 rounded-full text-sm font-bold transition-colors shadow-md">
+      ☎ 無料相談
+    </a>
+  </div>
+</header>
+
+
+<!-- ========== 1. ヒーロー ========== -->
+<section id="hero" class="hero-bg min-h-screen flex flex-col items-center justify-center text-center px-4 pt-16 relative">
+  <!-- 実績バナー -->
+  <div class="bg-white/15 backdrop-blur-sm border border-white/30 rounded-full px-6 py-2 text-white text-xs tracking-widest mb-6 font-medium">
+    累計相談件数 3,000件以上｜交通事故専門 12年の実績
+  </div>
+
+  <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-snug mb-5 drop-shadow-md">
+    交通事故のつらい痛み、<br>
+    <span class="text-orange-300">我慢していませんか？</span>
+  </h1>
+  <p class="text-white/85 text-sm sm:text-base mb-4 leading-relaxed max-w-xl">
+    「後から痛みが出てきた」「病院で異常なしと言われたが辛い」<br>
+    そのお悩み、さくら整骨院にお任せください。
+  </p>
+
+  <!-- 0円強調 -->
+  <div class="bg-white/15 backdrop-blur-sm border border-orange-300/60 rounded-2xl px-8 py-4 mb-8 text-white">
+    <p class="text-sm mb-1 opacity-80">自賠責保険対応</p>
+    <p class="text-2xl font-black">治療費の<span class="text-orange-300 text-3xl">自己負担0円</span></p>
+    <p class="text-xs opacity-70 mt-1">※ 保険適用の場合。詳しくはご相談ください。</p>
+  </div>
+
+  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="tel:0612345678"
+       class="inline-flex items-center justify-center gap-2 bg-sakura-accent hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full text-base transition-colors shadow-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.6.57 1 1 0 011 1V21a1 1 0 01-1 1C10.61 22 2 13.39 2 3a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.6 1 1 0 01-.24 1.01z"/>
+      </svg>
+      今すぐ無料相談（電話）
+    </a>
+    <a href="#flow"
+       class="inline-flex items-center justify-center gap-2 bg-white text-sakura-green hover:bg-sakura-light font-bold px-8 py-4 rounded-full text-base transition-colors shadow-lg">
+      施術の流れを見る
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+  <p class="text-white/50 text-xs mt-6">受付時間：平日 9:00〜20:00 / 土日祝 9:00〜17:00</p>
+
+  <!-- スクロール誘導 -->
+  <div class="absolute bottom-8 text-white/60 animate-bounce">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ========== 2. こんな症状でお悩みの方へ ========== -->
+<section id="symptoms" class="py-20 px-4 bg-sakura-pale">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="text-sakura-green text-sm tracking-widest font-semibold mb-2">SYMPTOMS</p>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-3">こんな症状でお悩みの方へ</h2>
+    <p class="text-sakura-muted text-sm mb-10">交通事故後の症状はすぐに現れないこともあります。当てはまる症状がある方はご相談ください。</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
+      <!-- 症状1 -->
+      <div class="card-hover bg-white border-l-4 border-sakura-green rounded-xl p-5 flex items-start gap-4 shadow-sm fade-in">
+        <span class="text-3xl mt-0.5">🤕</span>
+        <div>
+          <h3 class="font-bold text-sakura-text mb-1">首・肩・背中の痛み</h3>
+          <p class="text-sakura-muted text-xs leading-relaxed">むちうちによる頸部・肩甲骨周辺のこり・痛み・違和感</p>
+        </div>
+      </div>
+      <!-- 症状2 -->
+      <div class="card-hover bg-white border-l-4 border-sakura-green rounded-xl p-5 flex items-start gap-4 shadow-sm fade-in" style="transition-delay:.05s">
+        <span class="text-3xl mt-0.5">😵</span>
+        <div>
+          <h3 class="font-bold text-sakura-text mb-1">頭痛・めまい</h3>
+          <p class="text-sakura-muted text-xs leading-relaxed">事故後から続く慢性的な頭痛・立ちくらみ・ふらつき</p>
+        </div>
+      </div>
+      <!-- 症状3 -->
+      <div class="card-hover bg-white border-l-4 border-sakura-green rounded-xl p-5 flex items-start gap-4 shadow-sm fade-in" style="transition-delay:.1s">
+        <span class="text-3xl mt-0.5">😴</span>
+        <div>
+          <h3 class="font-bold text-sakura-text mb-1">倦怠感・睡眠障害</h3>
+          <p class="text-sakura-muted text-xs leading-relaxed">体のだるさが取れない・夜うまく眠れないなどの不調</p>
+        </div>
+      </div>
+      <!-- 症状4 -->
+      <div class="card-hover bg-white border-l-4 border-sakura-green rounded-xl p-5 flex items-start gap-4 shadow-sm fade-in" style="transition-delay:.15s">
+        <span class="text-3xl mt-0.5">🦵</span>
+        <div>
+          <h3 class="font-bold text-sakura-text mb-1">腰・膝の痛み</h3>
+          <p class="text-sakura-muted text-xs leading-relaxed">衝撃による腰椎・膝関節へのダメージや慢性痛</p>
+        </div>
+      </div>
+      <!-- 症状5 -->
+      <div class="card-hover bg-white border-l-4 border-sakura-green rounded-xl p-5 flex items-start gap-4 shadow-sm fade-in" style="transition-delay:.2s">
+        <span class="text-3xl mt-0.5">🤲</span>
+        <div>
+          <h3 class="font-bold text-sakura-text mb-1">手足のしびれ・麻痺感</h3>
+          <p class="text-sakura-muted text-xs leading-relaxed">神経へのダメージによる四肢のしびれ・感覚異常</p>
+        </div>
+      </div>
+      <!-- 症状6 -->
+      <div class="card-hover bg-white border-l-4 border-sakura-green rounded-xl p-5 flex items-start gap-4 shadow-sm fade-in" style="transition-delay:.25s">
+        <span class="text-3xl mt-0.5">😟</span>
+        <div>
+          <h3 class="font-bold text-sakura-text mb-1">不安感・集中力低下</h3>
+          <p class="text-sakura-muted text-xs leading-relaxed">事故後のPTSD・不安感・集中力・記憶力の低下</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 bg-sakura-green/10 border border-sakura-border rounded-2xl p-6 text-sm text-sakura-text leading-relaxed fade-in">
+      ⚠️ <strong>「病院でレントゲンを撮ったが異常なし」と言われた方も、整骨院での施術が有効な場合があります。</strong><br>
+      むちうちは画像に写らない軟部組織のダメージが主な原因です。まずはお気軽にご相談ください。
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 3. 選ばれる5つの理由 ========== -->
+<section id="reasons" class="py-20 px-4 bg-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="text-sakura-green text-sm tracking-widest font-semibold mb-2">REASONS</p>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-3">当院が選ばれる<span class="text-sakura-green">5つの理由</span></h2>
+    <div class="w-12 h-0.5 bg-sakura-green mx-auto mb-12"></div>
+  </div>
+
+  <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- 理由1 -->
+    <div class="card-hover bg-sakura-pale border border-sakura-border rounded-2xl p-7 flex flex-col items-center text-center fade-in">
+      <div class="w-16 h-16 rounded-full bg-sakura-green flex items-center justify-center text-3xl mb-4 shadow-md">🏥</div>
+      <h3 class="font-bold text-sakura-text text-lg mb-2">交通事故専門12年</h3>
+      <p class="text-sakura-muted text-sm leading-relaxed">むちうち・交通事故後遺症に特化した施術を12年以上提供。累計3,000件以上の相談実績があります。</p>
+    </div>
+    <!-- 理由2 -->
+    <div class="card-hover bg-sakura-pale border border-sakura-border rounded-2xl p-7 flex flex-col items-center text-center fade-in" style="transition-delay:.08s">
+      <div class="w-16 h-16 rounded-full bg-sakura-green flex items-center justify-center text-3xl mb-4 shadow-md">💴</div>
+      <h3 class="font-bold text-sakura-text text-lg mb-2">自己負担0円で安心</h3>
+      <p class="text-sakura-muted text-sm leading-relaxed">自賠責保険が適用されるため、治療費は保険会社が負担。患者様の金銭的な負担は一切ありません。</p>
+    </div>
+    <!-- 理由3 -->
+    <div class="card-hover bg-sakura-pale border border-sakura-border rounded-2xl p-7 flex flex-col items-center text-center fade-in" style="transition-delay:.16s">
+      <div class="w-16 h-16 rounded-full bg-sakura-green flex items-center justify-center text-3xl mb-4 shadow-md">📋</div>
+      <h3 class="font-bold text-sakura-text text-lg mb-2">保険手続きも完全サポート</h3>
+      <p class="text-sakura-muted text-sm leading-relaxed">保険会社とのやり取りや書類作成など、煩わしい手続きを院がすべて代行。初めての方でも安心です。</p>
+    </div>
+    <!-- 理由4 -->
+    <div class="card-hover bg-sakura-pale border border-sakura-border rounded-2xl p-7 flex flex-col items-center text-center fade-in" style="transition-delay:.06s">
+      <div class="w-16 h-16 rounded-full bg-sakura-green flex items-center justify-center text-3xl mb-4 shadow-md">🕐</div>
+      <h3 class="font-bold text-sakura-text text-lg mb-2">当日・夜間も対応</h3>
+      <p class="text-sakura-muted text-sm leading-relaxed">平日は20時まで受付。事故翌日・当日のご来院も歓迎します。症状が出たらすぐにご相談ください。</p>
+    </div>
+    <!-- 理由5 -->
+    <div class="card-hover bg-sakura-pale border border-sakura-border rounded-2xl p-7 flex flex-col items-center text-center fade-in sm:col-span-2 lg:col-span-1" style="transition-delay:.14s">
+      <div class="w-16 h-16 rounded-full bg-sakura-green flex items-center justify-center text-3xl mb-4 shadow-md">👨‍⚕️</div>
+      <h3 class="font-bold text-sakura-text text-lg mb-2">国家資格保持者が在籍</h3>
+      <p class="text-sakura-muted text-sm leading-relaxed">柔道整復師・鍼灸師の国家資格保有者が在籍。根拠に基づいた施術で確かな効果をご提供します。</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 4. 施術の流れ ========== -->
+<section id="flow" class="py-20 px-4 bg-sakura-pale">
+  <div class="max-w-3xl mx-auto text-center">
+    <p class="text-sakura-green text-sm tracking-widest font-semibold mb-2">FLOW</p>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-3">施術の流れ</h2>
+    <p class="text-sakura-muted text-sm mb-12">初めてご来院される方も、スムーズにご案内します。</p>
+  </div>
+
+  <div class="max-w-2xl mx-auto space-y-0">
+    <!-- Step1 -->
+    <div class="relative flex gap-5 pb-10 fade-in">
+      <div class="flex flex-col items-center">
+        <div class="w-12 h-12 rounded-full bg-sakura-green text-white flex items-center justify-center font-black text-lg shadow-md shrink-0">1</div>
+        <div class="w-0.5 flex-1 bg-gradient-to-b from-sakura-green to-sakura-border mt-2"></div>
+      </div>
+      <div class="bg-white border border-sakura-border rounded-2xl p-6 flex-1 shadow-sm mb-2">
+        <h3 class="font-bold text-sakura-text text-lg mb-1 flex items-center gap-2">📞 お電話・Web予約</h3>
+        <p class="text-sakura-muted text-sm leading-relaxed">お電話またはWebフォームからご予約ください。「交通事故後の相談」とお伝えいただくとスムーズです。当日・翌日のご予約も可能です。</p>
+      </div>
+    </div>
+
+    <!-- Step2 -->
+    <div class="relative flex gap-5 pb-10 fade-in" style="transition-delay:.1s">
+      <div class="flex flex-col items-center">
+        <div class="w-12 h-12 rounded-full bg-sakura-green text-white flex items-center justify-center font-black text-lg shadow-md shrink-0">2</div>
+        <div class="w-0.5 flex-1 bg-gradient-to-b from-sakura-green to-sakura-border mt-2"></div>
+      </div>
+      <div class="bg-white border border-sakura-border rounded-2xl p-6 flex-1 shadow-sm mb-2">
+        <h3 class="font-bold text-sakura-text text-lg mb-1 flex items-center gap-2">📝 問診・カウンセリング</h3>
+        <p class="text-sakura-muted text-sm leading-relaxed">事故の状況・症状の経緯・お体の状態を丁寧にヒアリング。保険の手続きについてもわかりやすくご説明します。</p>
+      </div>
+    </div>
+
+    <!-- Step3 -->
+    <div class="relative flex gap-5 pb-10 fade-in" style="transition-delay:.2s">
+      <div class="flex flex-col items-center">
+        <div class="w-12 h-12 rounded-full bg-sakura-green text-white flex items-center justify-center font-black text-lg shadow-md shrink-0">3</div>
+        <div class="w-0.5 flex-1 bg-gradient-to-b from-sakura-green to-sakura-border mt-2"></div>
+      </div>
+      <div class="bg-white border border-sakura-border rounded-2xl p-6 flex-1 shadow-sm mb-2">
+        <h3 class="font-bold text-sakura-text text-lg mb-1 flex items-center gap-2">🔍 姿勢・動作分析</h3>
+        <p class="text-sakura-muted text-sm leading-relaxed">触診・姿勢評価・可動域テストを実施。痛みの根本原因を特定し、個別の施術プランを作成します。</p>
+      </div>
+    </div>
+
+    <!-- Step4 -->
+    <div class="relative flex gap-5 pb-10 fade-in" style="transition-delay:.3s">
+      <div class="flex flex-col items-center">
+        <div class="w-12 h-12 rounded-full bg-sakura-green text-white flex items-center justify-center font-black text-lg shadow-md shrink-0">4</div>
+        <div class="w-0.5 flex-1 bg-gradient-to-b from-sakura-green to-sakura-border mt-2"></div>
+      </div>
+      <div class="bg-white border border-sakura-border rounded-2xl p-6 flex-1 shadow-sm mb-2">
+        <h3 class="font-bold text-sakura-text text-lg mb-1 flex items-center gap-2">💆 施術</h3>
+        <p class="text-sakura-muted text-sm leading-relaxed">手技療法・電気療法・鍼灸など、症状に合わせた施術を組み合わせてご提供。むちうちの痛みを根本から改善します。</p>
+      </div>
+    </div>
+
+    <!-- Step5 -->
+    <div class="relative flex gap-5 fade-in" style="transition-delay:.4s">
+      <div class="flex flex-col items-center">
+        <div class="w-12 h-12 rounded-full bg-sakura-accent text-white flex items-center justify-center font-black text-lg shadow-md shrink-0">5</div>
+      </div>
+      <div class="bg-sakura-green/10 border-2 border-sakura-green rounded-2xl p-6 flex-1 shadow-sm">
+        <h3 class="font-bold text-sakura-text text-lg mb-1 flex items-center gap-2">📅 アフターケア・再診</h3>
+        <p class="text-sakura-muted text-sm leading-relaxed">施術後の変化を確認し、次回プランをご提案。回復の進捗に合わせた継続的なケアで、日常生活への早期復帰をサポートします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 5. 料金案内 ========== -->
+<section id="price" class="py-20 px-4 bg-white">
+  <div class="max-w-3xl mx-auto text-center">
+    <p class="text-sakura-green text-sm tracking-widest font-semibold mb-2">PRICE</p>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-3">料金案内</h2>
+    <div class="w-12 h-0.5 bg-sakura-green mx-auto mb-10"></div>
+
+    <!-- 0円強調カード -->
+    <div class="bg-gradient-to-br from-sakura-green to-sakura-dark text-white rounded-3xl p-8 mb-12 shadow-xl fade-in">
+      <p class="text-sm opacity-80 mb-2 tracking-wide">交通事故施術は</p>
+      <p class="text-4xl sm:text-5xl font-black mb-3">
+        自己負担 <span class="text-orange-300 text-5xl sm:text-6xl">¥0</span>
+      </p>
+      <p class="opacity-80 text-sm mb-5">自賠責保険が適用されるため、患者様のご負担は一切ありません。</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+        <div class="bg-white/15 rounded-xl p-3">✅ 初診料・相談料 無料</div>
+        <div class="bg-white/15 rounded-xl p-3">✅ 保険手続きを代行</div>
+        <div class="bg-white/15 rounded-xl p-3">✅ 何度通っても0円</div>
+      </div>
+      <p class="text-xs opacity-60 mt-4">※ 保険会社との交渉状況により異なる場合があります。詳しくはお問い合わせください。</p>
+    </div>
+
+    <!-- 通常料金テーブル -->
+    <h3 class="text-lg font-bold text-sakura-text mb-4 text-left">通常料金（自費診療）</h3>
+    <div class="overflow-x-auto rounded-2xl shadow-sm border border-sakura-border fade-in">
+      <table class="hour-table w-full text-sm">
+        <thead>
+          <tr>
+            <th class="py-3 px-5 text-left font-semibold">メニュー</th>
+            <th class="py-3 px-5 text-center font-semibold">時間</th>
+            <th class="py-3 px-5 text-right font-semibold">料金（税込）</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white text-sakura-text">
+          <tr><td class="py-3 px-5 border-b border-sakura-border font-medium">初診カウンセリング</td><td class="py-3 px-5 border-b border-sakura-border text-center text-sakura-muted">30分</td><td class="py-3 px-5 border-b border-sakura-border text-right font-bold text-sakura-green">無料</td></tr>
+          <tr><td class="py-3 px-5 border-b border-sakura-border font-medium">整体・手技療法</td><td class="py-3 px-5 border-b border-sakura-border text-center text-sakura-muted">40分</td><td class="py-3 px-5 border-b border-sakura-border text-right font-bold">¥5,500</td></tr>
+          <tr><td class="py-3 px-5 border-b border-sakura-border font-medium">電気療法（EMS・超音波）</td><td class="py-3 px-5 border-b border-sakura-border text-center text-sakura-muted">20分</td><td class="py-3 px-5 border-b border-sakura-border text-right font-bold">¥2,200</td></tr>
+          <tr><td class="py-3 px-5 border-b border-sakura-border font-medium">鍼灸施術</td><td class="py-3 px-5 border-b border-sakura-border text-center text-sakura-muted">40分</td><td class="py-3 px-5 border-b border-sakura-border text-right font-bold">¥6,600</td></tr>
+          <tr><td class="py-3 px-5 border-b border-sakura-border font-medium">テーピング処置</td><td class="py-3 px-5 border-b border-sakura-border text-center text-sakura-muted">10分〜</td><td class="py-3 px-5 border-b border-sakura-border text-right font-bold">¥1,100〜</td></tr>
+          <tr><td class="py-3 px-5 font-medium">慢性症状コース（60分）</td><td class="py-3 px-5 text-center text-sakura-muted">60分</td><td class="py-3 px-5 text-right font-bold">¥8,800</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-sakura-muted text-xs mt-3 text-left">※ 健康保険が適用できる場合もございます。詳しくはお問い合わせください。</p>
+  </div>
+</section>
+
+
+<!-- ========== 6. 患者様の声 ========== -->
+<section id="reviews" class="py-20 px-4 bg-sakura-pale">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="text-sakura-green text-sm tracking-widest font-semibold mb-2">REVIEWS</p>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-3">患者様の声</h2>
+    <div class="w-12 h-0.5 bg-sakura-green mx-auto mb-12"></div>
+  </div>
+
+  <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- レビュー1 -->
+    <div class="card-hover bg-white rounded-2xl p-7 shadow-sm border border-sakura-border flex flex-col fade-in">
+      <div class="flex text-yellow-400 text-lg mb-3">★★★★★</div>
+      <p class="text-sakura-text text-sm leading-relaxed flex-1">
+        「追突事故の翌日から首が痛くて不安でしたが、先生がとても親切に説明してくださいました。保険の手続きもすべてやっていただき、費用も一切かからず安心して通えました。今では痛みがほぼなくなりました！」
+      </p>
+      <div class="mt-5 pt-5 border-t border-sakura-border flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-sakura-light text-sakura-green font-bold flex items-center justify-center">T</div>
+        <div>
+          <p class="font-semibold text-sakura-text text-sm">T.M. 様（38歳・会社員）</p>
+          <p class="text-sakura-muted text-xs">むちうち・首の痛み</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- レビュー2 -->
+    <div class="card-hover bg-white rounded-2xl p-7 shadow-sm border border-sakura-border flex flex-col fade-in" style="transition-delay:.1s">
+      <div class="flex text-yellow-400 text-lg mb-3">★★★★★</div>
+      <p class="text-sakura-text text-sm leading-relaxed flex-1">
+        「病院で『異常なし』と言われたのに頭痛や肩こりが続いていて困っていました。こちらに来てから症状の原因を丁寧に説明していただき、施術を受けると少しずつ楽になっていきました。早く来ればよかったです。」
+      </p>
+      <div class="mt-5 pt-5 border-t border-sakura-border flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-sakura-light text-sakura-green font-bold flex items-center justify-center">K</div>
+        <div>
+          <p class="font-semibold text-sakura-text text-sm">K.Y. 様（52歳・主婦）</p>
+          <p class="text-sakura-muted text-xs">頭痛・肩こり・倦怠感</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- レビュー3 -->
+    <div class="card-hover bg-white rounded-2xl p-7 shadow-sm border border-sakura-border flex flex-col fade-in" style="transition-delay:.2s">
+      <div class="flex text-yellow-400 text-lg mb-3">★★★★★</div>
+      <p class="text-sakura-text text-sm leading-relaxed flex-1">
+        「交通事故後の腰痛と手のしびれに悩んでいました。整形外科と並行して通いましたが、こちらの施術で体の状態が見違えるほど改善。仕事への復帰も想定より早くでき、本当に感謝しています。」
+      </p>
+      <div class="mt-5 pt-5 border-t border-sakura-border flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-sakura-light text-sakura-green font-bold flex items-center justify-center">H</div>
+        <div>
+          <p class="font-semibold text-sakura-text text-sm">H.S. 様（45歳・自営業）</p>
+          <p class="text-sakura-muted text-xs">腰痛・手のしびれ</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 7. 院長挨拶 ========== -->
+<section id="director" class="py-20 px-4 bg-white">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+      <p class="text-sakura-green text-sm tracking-widest font-semibold mb-2">DIRECTOR</p>
+      <h2 class="text-2xl sm:text-3xl font-bold">院長挨拶</h2>
+      <div class="w-12 h-0.5 bg-sakura-green mx-auto mt-4"></div>
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-10 items-start fade-in">
+      <!-- 写真エリア -->
+      <div class="w-full md:w-2/5 shrink-0">
+        <div class="relative">
+          <img src="https://placehold.co/480x560/e8f5f1/2d8a6e?text=院長%0A田中+誠" alt="院長 田中誠" class="w-full rounded-2xl shadow-lg object-cover">
+          <div class="absolute -bottom-4 -right-4 bg-sakura-green text-white text-xs px-4 py-2 rounded-xl shadow-md font-semibold">
+            柔道整復師 / 鍼灸師
+          </div>
+        </div>
+        <!-- 資格一覧 -->
+        <div class="mt-8 bg-sakura-pale border border-sakura-border rounded-2xl p-5">
+          <h4 class="font-bold text-sakura-text text-sm mb-3">保有資格・経歴</h4>
+          <ul class="space-y-1.5 text-xs text-sakura-muted">
+            <li class="flex gap-2"><span class="text-sakura-green font-bold">✓</span>国家資格 柔道整復師</li>
+            <li class="flex gap-2"><span class="text-sakura-green font-bold">✓</span>国家資格 鍼灸師（はり師・きゅう師）</li>
+            <li class="flex gap-2"><span class="text-sakura-green font-bold">✓</span>交通事故施術認定資格（日本整骨師会）</li>
+            <li class="flex gap-2"><span class="text-sakura-green font-bold">✓</span>大阪医療専門学校 卒業</li>
+            <li class="flex gap-2"><span class="text-sakura-green font-bold">✓</span>大阪市内整骨院 勤務（8年）</li>
+            <li class="flex gap-2"><span class="text-sakura-green font-bold">✓</span>さくら整骨院 開院（2012年）</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- テキストエリア -->
+      <div class="flex-1">
+        <p class="text-sakura-muted text-sm mb-1">院長</p>
+        <h3 class="text-2xl font-bold text-sakura-text mb-1">田中 誠</h3>
+        <p class="text-sakura-green text-sm font-semibold mb-6">Makoto Tanaka</p>
+
+        <div class="space-y-4 text-sakura-text text-sm sm:text-base leading-relaxed">
+          <p>
+            交通事故は、身体的な痛みだけでなく、手続きの煩雑さや将来への不安など、患者様に多くの負担をもたらします。「怪我をした上になぜこんなに大変な思いをしなければならないのか」——そんな理不尽さを感じる患者様を、一人でも多くサポートしたい。それがさくら整骨院を開院した理由です。
+          </p>
+          <p>
+            当院では、痛みの「その先」を見据えた施術を提供しています。単に症状を緩和するだけでなく、日常生活や仕事への早期復帰、そして再発しない体づくりを目指しています。
+          </p>
+          <p>
+            保険の手続きから施術方針の説明まで、すべてにおいて「わかりやすく、丁寧に」を心がけています。不安なことは何でもご相談ください。皆様のご回復に全力で向き合います。
+          </p>
+        </div>
+
+        <div class="mt-6 border-l-4 border-sakura-green pl-4 italic text-sakura-muted text-sm">
+          「患者様の笑顔が戻る瞬間が、私たちの最大の喜びです。」
+        </div>
+
+        <a href="tel:0612345678"
+           class="mt-8 inline-flex items-center gap-2 bg-sakura-green hover:bg-sakura-dark text-white font-bold px-7 py-3 rounded-full text-sm transition-colors">
+          院長に直接相談する →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 8. よくある質問 ========== -->
+<section id="faq" class="py-20 px-4 bg-sakura-pale">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-12">
+      <p class="text-sakura-green text-sm tracking-widest font-semibold mb-2">FAQ</p>
+      <h2 class="text-2xl sm:text-3xl font-bold">よくある質問</h2>
+      <div class="w-12 h-0.5 bg-sakura-green mx-auto mt-4"></div>
+    </div>
+
+    <div class="space-y-4">
+      <!-- Q1 -->
+      <div class="bg-white border border-sakura-border rounded-2xl overflow-hidden shadow-sm fade-in">
+        <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left" onclick="toggleFaq(this)">
+          <div class="flex items-start gap-3">
+            <span class="text-sakura-green font-black text-lg shrink-0">Q</span>
+            <span class="font-semibold text-sakura-text text-sm sm:text-base">事故直後でなくても診てもらえますか？</span>
+          </div>
+          <span class="faq-icon text-sakura-green text-2xl font-light shrink-0 ml-4">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-0">
+          <div class="border-t border-sakura-border pt-4 pb-5 flex gap-3 text-sm text-sakura-muted leading-relaxed">
+            <span class="text-sakura-accent font-black shrink-0">A</span>
+            <p>はい、事故からしばらく経ってからでも診察可能です。むちうちは数日〜数週間後に症状が出ることも多く、「あのとき我慢しなければよかった」という方も多くいらっしゃいます。ただし、時間が経つほど保険対応が複雑になるため、早めのご相談をお勧めします。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="bg-white border border-sakura-border rounded-2xl overflow-hidden shadow-sm fade-in" style="transition-delay:.05s">
+        <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left" onclick="toggleFaq(this)">
+          <div class="flex items-start gap-3">
+            <span class="text-sakura-green font-black text-lg shrink-0">Q</span>
+            <span class="font-semibold text-sakura-text text-sm sm:text-base">加害者側の保険会社から「整骨院はNG」と言われましたが…</span>
+          </div>
+          <span class="faq-icon text-sakura-green text-2xl font-light shrink-0 ml-4">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-0">
+          <div class="border-t border-sakura-border pt-4 pb-5 flex gap-3 text-sm text-sakura-muted leading-relaxed">
+            <span class="text-sakura-accent font-black shrink-0">A</span>
+            <p>整骨院での施術も自賠責保険の対象です。保険会社からそのように言われても、実際には適用できるケースがほとんどです。当院では保険会社との交渉もサポートしますので、まずはご相談ください。泣き寝入りせずに済む方法を一緒に考えます。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="bg-white border border-sakura-border rounded-2xl overflow-hidden shadow-sm fade-in" style="transition-delay:.1s">
+        <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left" onclick="toggleFaq(this)">
+          <div class="flex items-start gap-3">
+            <span class="text-sakura-green font-black text-lg shrink-0">Q</span>
+            <span class="font-semibold text-sakura-text text-sm sm:text-base">病院と整骨院を並行して通えますか？</span>
+          </div>
+          <span class="faq-icon text-sakura-green text-2xl font-light shrink-0 ml-4">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-0">
+          <div class="border-t border-sakura-border pt-4 pb-5 flex gap-3 text-sm text-sakura-muted leading-relaxed">
+            <span class="text-sakura-accent font-black shrink-0">A</span>
+            <p>可能です。整形外科などと並行して当院にご通院いただけます。画像診断など医師の専門的な判断を受けながら、整骨院で手技療法・鍼灸・電気療法などを組み合わせることで、より効果的な回復が期待できます。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="bg-white border border-sakura-border rounded-2xl overflow-hidden shadow-sm fade-in" style="transition-delay:.15s">
+        <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left" onclick="toggleFaq(this)">
+          <div class="flex items-start gap-3">
+            <span class="text-sakura-green font-black text-lg shrink-0">Q</span>
+            <span class="font-semibold text-sakura-text text-sm sm:text-base">何回通えばよくなりますか？</span>
+          </div>
+          <span class="faq-icon text-sakura-green text-2xl font-light shrink-0 ml-4">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-0">
+          <div class="border-t border-sakura-border pt-4 pb-5 flex gap-3 text-sm text-sakura-muted leading-relaxed">
+            <span class="text-sakura-accent font-black shrink-0">A</span>
+            <p>症状の程度・事故の状況・体の状態によって異なります。軽度のむちうちであれば数週間〜2ヶ月程度、重度の場合はより長期になることもあります。初回のカウンセリングで現状を評価し、おおよその目安をご説明しますのでご安心ください。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="bg-white border border-sakura-border rounded-2xl overflow-hidden shadow-sm fade-in" style="transition-delay:.2s">
+        <button class="faq-btn w-full flex items-center justify-between px-6 py-5 text-left" onclick="toggleFaq(this)">
+          <div class="flex items-start gap-3">
+            <span class="text-sakura-green font-black text-lg shrink-0">Q</span>
+            <span class="font-semibold text-sakura-text text-sm sm:text-base">自分が被害者でない（過失がある）場合も保険は使えますか？</span>
+          </div>
+          <span class="faq-icon text-sakura-green text-2xl font-light shrink-0 ml-4">+</span>
+        </button>
+        <div class="faq-answer px-6 pb-0">
+          <div class="border-t border-sakura-border pt-4 pb-5 flex gap-3 text-sm text-sakura-muted leading-relaxed">
+            <span class="text-sakura-accent font-black shrink-0">A</span>
+            <p>過失がある場合でも、相手方の自賠責保険・任意保険が適用できるケースがあります。また、ご自身の人身傷害保険・搭乗者傷害保険が使えることもあります。複雑なケースも多いため、まずはお気軽にご相談ください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 9. アクセス・診療時間 ========== -->
+<section id="access" class="py-20 px-4 bg-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="text-sakura-green text-sm tracking-widest font-semibold mb-2">ACCESS</p>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-4">アクセス・診療時間</h2>
+    <div class="w-12 h-0.5 bg-sakura-green mx-auto mb-12"></div>
+  </div>
+
+  <div class="max-w-4xl mx-auto flex flex-col lg:flex-row gap-8 fade-in">
+    <!-- 左カラム: 院情報 + 診療時間 -->
+    <div class="w-full lg:w-1/2 space-y-6">
+      <!-- 院情報 -->
+      <div class="bg-sakura-pale border border-sakura-border rounded-2xl p-6">
+        <h3 class="font-bold text-sakura-text mb-5 text-lg flex items-center gap-2">
+          <span class="w-1 h-5 bg-sakura-green rounded-full"></span>院情報
+        </h3>
+        <dl class="space-y-3 text-sm">
+          <div class="flex gap-4"><dt class="text-sakura-muted w-16 shrink-0 font-medium">院名</dt><dd class="text-sakura-text font-semibold">さくら整骨院</dd></div>
+          <div class="flex gap-4"><dt class="text-sakura-muted w-16 shrink-0 font-medium">住所</dt><dd class="text-sakura-text">〒530-0001<br>大阪府大阪市北区梅田1-2-3<br>さくらビル2F</dd></div>
+          <div class="flex gap-4"><dt class="text-sakura-muted w-16 shrink-0 font-medium">電話</dt><dd><a href="tel:0612345678" class="text-sakura-green font-bold hover:underline">06-1234-5678</a></dd></div>
+          <div class="flex gap-4"><dt class="text-sakura-muted w-16 shrink-0 font-medium">アクセス</dt><dd class="text-sakura-text">JR大阪駅 徒歩3分<br>阪急梅田駅 徒歩5分<br>地下鉄梅田駅 徒歩4分</dd></div>
+          <div class="flex gap-4"><dt class="text-sakura-muted w-16 shrink-0 font-medium">駐車場</dt><dd class="text-sakura-muted">なし（近隣コインパーキングをご利用ください）</dd></div>
+        </dl>
+      </div>
+
+      <!-- 診療時間テーブル -->
+      <div class="bg-sakura-pale border border-sakura-border rounded-2xl p-6">
+        <h3 class="font-bold text-sakura-text mb-5 text-lg flex items-center gap-2">
+          <span class="w-1 h-5 bg-sakura-green rounded-full"></span>診療時間
+        </h3>
+        <div class="overflow-x-auto">
+          <table class="hour-table w-full text-xs sm:text-sm text-center">
+            <thead>
+              <tr>
+                <th class="py-2 px-3 text-left">時間帯</th>
+                <th class="py-2 px-3">月</th><th class="py-2 px-3">火</th><th class="py-2 px-3">水</th>
+                <th class="py-2 px-3">木</th><th class="py-2 px-3">金</th>
+                <th class="py-2 px-3 bg-blue-400">土</th><th class="py-2 px-3 bg-red-400">日祝</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="py-2 px-3 text-left font-medium text-sakura-text">9:00〜13:00</td>
+                <td class="py-2 px-3 text-sakura-green font-bold">○</td>
+                <td class="py-2 px-3 text-sakura-green font-bold">○</td>
+                <td class="py-2 px-3 text-sakura-green font-bold">○</td>
+                <td class="py-2 px-3 text-sakura-green font-bold">○</td>
+                <td class="py-2 px-3 text-sakura-green font-bold">○</td>
+                <td class="py-2 px-3 text-sakura-green font-bold">○</td>
+                <td class="py-2 px-3 text-sakura-green font-bold">○</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 text-left font-medium text-sakura-text">15:00〜20:00</td>
+                <td class="py-2 px-3 text-sakura-green font-bold">○</td>
+                <td class="py-2 px-3 text-sakura-green font-bold">○</td>
+                <td class="py-2 px-3 text-sakura-muted">—</td>
+                <td class="py-2 px-3 text-sakura-green font-bold">○</td>
+                <td class="py-2 px-3 text-sakura-green font-bold">○</td>
+                <td class="py-2 px-3 text-red-400 font-bold">×</td>
+                <td class="py-2 px-3 text-red-400 font-bold">×</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sakura-muted text-xs mt-3">水曜午後・祝日午後は休診。定休日なし。</p>
+      </div>
+    </div>
+
+    <!-- 右カラム: 地図 -->
+    <div class="w-full lg:w-1/2 flex flex-col">
+      <img src="https://placehold.co/600x450/e8f5f1/2d8a6e?text=Map+Area%0A(Google+Maps)" alt="地図" class="w-full rounded-2xl shadow-md object-cover flex-1 min-h-56">
+      <p class="text-center text-xs text-sakura-muted mt-3">※ 実装時はGoogle Maps埋め込みに差し替えてください</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 10. 予約CTA ========== -->
+<section id="cta" class="py-24 px-4 bg-gradient-to-br from-sakura-dark to-sakura-green text-white">
+  <div class="max-w-2xl mx-auto text-center fade-in">
+    <p class="text-green-200 text-sm tracking-widest mb-3 font-semibold">CONTACT & RESERVATION</p>
+    <h2 class="text-2xl sm:text-3xl font-black mb-4 leading-snug">
+      まずは<span class="text-orange-300">無料相談</span>からどうぞ
+    </h2>
+    <p class="text-white/75 text-sm sm:text-base mb-4 leading-relaxed">
+      「相談だけ」「費用のことを聞きたいだけ」でも大丈夫です。<br>
+      交通事故後の不安やお悩みを、一緒に解決しましょう。
+    </p>
+
+    <!-- 0円再強調 -->
+    <div class="bg-white/15 border border-white/30 rounded-2xl px-6 py-4 mb-10 text-sm text-white/90">
+      ✅ 初回相談料 <strong>無料</strong>　✅ 自賠責保険で治療費 <strong>自己負担0円</strong>　✅ 保険手続きをすべて代行
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-5 justify-center">
+      <!-- 電話予約 -->
+      <a href="tel:0612345678"
+         class="inline-flex items-center justify-center gap-3 bg-sakura-accent hover:bg-orange-600 text-white font-black px-10 py-5 rounded-full text-base transition-colors shadow-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.6.57 1 1 0 011 1V21a1 1 0 01-1 1C10.61 22 2 13.39 2 3a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.6 1 1 0 01-.24 1.01z"/>
+        </svg>
+        <span class="text-left leading-snug">電話で無料相談<br><span class="font-normal text-sm opacity-90">06-1234-5678</span></span>
+      </a>
+      <!-- Web予約 -->
+      <a href="#"
+         class="inline-flex items-center justify-center gap-3 bg-white text-sakura-green hover:bg-sakura-pale font-black px-10 py-5 rounded-full text-base transition-colors shadow-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        <span class="text-left leading-snug">Webで予約する<br><span class="font-normal text-sm text-sakura-muted">24時間受付</span></span>
+      </a>
+    </div>
+
+    <p class="text-white/50 text-xs mt-8">平日 9:00〜20:00 / 土日祝 9:00〜17:00</p>
+  </div>
+</section>
+
+
+<!-- ========== フッター ========== -->
+<footer class="bg-sakura-text text-white/60 py-10 px-4 text-center text-sm">
+  <div class="max-w-4xl mx-auto">
+    <p class="text-white font-bold tracking-widest text-base mb-1">🌸 さくら整骨院</p>
+    <p class="text-xs mb-6">〒530-0001 大阪府大阪市北区梅田1-2-3 さくらビル2F　TEL: 06-1234-5678</p>
+    <nav class="flex flex-wrap justify-center gap-4 text-xs mb-6">
+      <a href="#symptoms" class="hover:text-white transition-colors">症状</a>
+      <a href="#reasons"  class="hover:text-white transition-colors">選ばれる理由</a>
+      <a href="#flow"     class="hover:text-white transition-colors">施術の流れ</a>
+      <a href="#price"    class="hover:text-white transition-colors">料金</a>
+      <a href="#reviews"  class="hover:text-white transition-colors">患者様の声</a>
+      <a href="#director" class="hover:text-white transition-colors">院長挨拶</a>
+      <a href="#faq"      class="hover:text-white transition-colors">よくある質問</a>
+      <a href="#access"   class="hover:text-white transition-colors">アクセス</a>
+    </nav>
+    <p class="text-xs">&copy; 2024 さくら整骨院. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+<!-- ========== JavaScript ========== -->
+<script>
+  // FAQアコーディオン
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const icon   = btn.querySelector('.faq-icon');
+    const isOpen = answer.classList.contains('open');
+    // 全部閉じる
+    document.querySelectorAll('.faq-answer.open').forEach(el => el.classList.remove('open'));
+    document.querySelectorAll('.faq-icon.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) {
+      answer.classList.add('open');
+      icon.classList.add('open');
+    }
+  }
+
+  // スクロールフェードイン
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

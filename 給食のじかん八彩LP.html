@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="給食のじかん 八彩｜兵庫県西宮市山口町。現役の学校給食調理師が作る、懐かしい給食おばんざいランチと給食カレーランチ。30〜60代に大人気のランチ専門店。">
+  <meta name="keywords" content="給食,おばんざい,カレー,ランチ,西宮,山口町,懐かしい,家庭料理,給食調理師">
+  <meta name="robots" content="index, follow">
+
+  <!-- OGP -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="給食のじかん 八彩｜懐かしい給食ランチ｜兵庫県西宮市山口町">
+  <meta property="og:description" content="現役給食調理師が作る、あの頃の給食ランチ。おばんざいランチ・給食カレーランチ。兵庫県西宮市山口町。">
+  <meta property="og:image"       content="https://placehold.co/1200x630/A8C3A0/FFF8EE?text=給食のじかん+八彩">
+  <meta property="og:url"         content="https://hassai.example.com">
+  <meta property="og:site_name"   content="給食のじかん 八彩">
+  <meta name="twitter:card"       content="summary_large_image">
+  <meta name="twitter:title"      content="給食のじかん 八彩｜懐かしい給食ランチ｜兵庫県西宮市山口町">
+  <meta name="twitter:description" content="現役給食調理師が作る懐かしい給食ランチ。おばんざい・給食カレー。">
+  <meta name="twitter:image"      content="https://placehold.co/1200x630/A8C3A0/FFF8EE?text=給食のじかん+八彩">
+
+  <title>給食のじかん 八彩｜懐かしい給食ランチ｜兵庫県西宮市山口町</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hassai: {
+              bg:           '#F7F3E8',
+              'bg-alt':     '#EDE8D8',
+              main:         '#A8C3A0',
+              'main-dark':  '#7A9E72',
+              'main-pale':  '#D6E8D2',
+              sub:          '#7A5C43',
+              'sub-light':  '#A07B5C',
+              accent:       '#D66A3D',
+              'accent-dark':'#B5511E',
+              text:         '#3D2B1F',
+              muted:        '#8C7B6E',
+              card:         '#FDF9F0',
+              border:       '#D4C9B0',
+              cream:        '#FFF8EE',
+            }
+          },
+          fontFamily: {
+            gothic: ['"游ゴシック"','"Yu Gothic"','"游ゴシック体"','YuGothic','"Hiragino Sans"','sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "游ゴシック","Yu Gothic","游ゴシック体",YuGothic,"Hiragino Sans",sans-serif;
+      background: #F7F3E8;
+      color: #3D2B1F;
+    }
+
+    /* ヒーロー */
+    .hero-bg {
+      background-image:
+        linear-gradient(to bottom,
+          rgba(247,243,232,0.15) 0%,
+          rgba(247,243,232,0.55) 55%,
+          rgba(247,243,232,1)   100%),
+        url('https://placehold.co/1600x960/A8C3A0/FFF8EE?text=給食のじかん+八彩');
+      background-size: cover;
+      background-position: center top;
+      min-height: 100svh;
+    }
+
+    /* ドットパターン */
+    .dot-pattern {
+      background-image: radial-gradient(circle, rgba(122,92,67,0.18) 1.2px, transparent 1.2px);
+      background-size: 20px 20px;
+    }
+
+    /* ボタン */
+    .btn-accent {
+      background: #D66A3D;
+      color: #FFF8EE;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-accent:hover { background: #B5511E; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(214,106,61,0.38); }
+
+    .btn-outline {
+      border: 2px solid #7A5C43;
+      color: #7A5C43;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .btn-outline:hover { background: #7A5C43; color: #FFF8EE; transform: translateY(-2px); }
+
+    /* カード */
+    .warm-card {
+      background: #FDF9F0;
+      border: 1px solid #D4C9B0;
+      border-radius: 1.25rem;
+      box-shadow: 0 3px 14px rgba(122,92,67,0.09);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .warm-card:hover { transform: translateY(-5px); box-shadow: 0 10px 32px rgba(122,92,67,0.18); }
+
+    /* セクションラベル */
+    .section-label {
+      display: inline-block;
+      background: #A8C3A0;
+      color: #FFF8EE;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      padding: 0.2rem 1rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    /* トレイライン */
+    .tray-line {
+      height: 3px;
+      background: linear-gradient(to right, #A8C3A0, #D66A3D, #A8C3A0);
+      border-radius: 9999px;
+    }
+
+    /* ナビ */
+    .nav-link { color: #7A5C43; font-size: 0.85rem; transition: color 0.2s; }
+    .nav-link:hover { color: #D66A3D; }
+
+    /* スクロールアニメーション */
+    .fade-up { opacity: 0; transform: translateY(26px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* 星レビュー */
+    .stars { color: #D66A3D; letter-spacing: 0.05em; }
+
+    /* チェックリスト */
+    .check-item { position: relative; padding-left: 1.4rem; }
+    .check-item::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #A8C3A0;
+      font-weight: 900;
+    }
+
+    /* メニューバッジ */
+    .menu-badge {
+      background: #D66A3D;
+      color: #FFF8EE;
+      font-size: 0.62rem;
+      padding: 0.15rem 0.65rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    /* 黒板風ボックス */
+    .chalkboard {
+      background: #3a5c38;
+      color: #e8f0e6;
+      border: 2.5px solid #2a4228;
+      border-radius: 0.75rem;
+      box-shadow: inset 0 1px 6px rgba(0,0,0,0.25);
+      line-height: 1.75;
+    }
+    .chalkboard .chalk-sub { color: #A8C3A0; font-size: 0.65rem; }
+
+    /* ヒーローバッジ */
+    .hero-badge {
+      background: rgba(253,249,240,0.92);
+      border: 1.5px solid #D4C9B0;
+      color: #7A5C43;
+      border-radius: 9999px;
+      padding: 0.38rem 1rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      backdrop-filter: blur(6px);
+    }
+
+    /* アクセントライン（短い下線） */
+    .accent-bar {
+      width: 36px;
+      height: 3px;
+      background: #D66A3D;
+      border-radius: 9999px;
+    }
+
+    /* 時間表示行 */
+    .hour-row { border-bottom: 1px dashed #D4C9B0; }
+    .hour-row:last-child { border-bottom: none; }
+  </style>
+</head>
+
+<body class="antialiased">
+
+<!-- ====== ナビゲーション ====== -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-hassai-cream/92 backdrop-blur-md border-b border-hassai-border">
+  <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+
+    <!-- ロゴ -->
+    <a href="#" class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl bg-hassai-main flex items-center justify-center text-hassai-cream font-black text-base shadow-sm">
+        八
+      </div>
+      <div class="flex flex-col leading-none">
+        <span class="text-[0.57rem] tracking-[0.25em] text-hassai-muted">KYUSHOKU NO JIKAN</span>
+        <span class="text-sm font-bold tracking-wide text-hassai-sub">給食のじかん 八彩</span>
+      </div>
+    </a>
+
+    <!-- ナビ -->
+    <nav class="hidden md:flex gap-6">
+      <a href="#kodawari" class="nav-link">こだわり</a>
+      <a href="#menu"     class="nav-link">メニュー</a>
+      <a href="#reviews"  class="nav-link">お客様の声</a>
+      <a href="#access"   class="nav-link">アクセス</a>
+    </nav>
+
+    <!-- CTA -->
+    <a href="#cta"
+       class="btn-accent px-5 py-2 rounded-full text-xs hidden sm:inline-block">
+      ご予約はこちら
+    </a>
+  </div>
+</header>
+
+
+<!-- ====== 1. ヒーロー ====== -->
+<section id="hero" class="hero-bg flex flex-col justify-end items-center pb-20 pt-28 px-4 text-center relative">
+
+  <!-- 上部バッジ群 -->
+  <div class="absolute top-20 sm:top-24 left-1/2 -translate-x-1/2 flex flex-wrap justify-center gap-2 w-full max-w-lg px-4">
+    <span class="hero-badge">🍱 現役給食調理師が腕をふるう</span>
+    <span class="hero-badge">🥬 おばんざいランチ</span>
+    <span class="hero-badge">🍛 給食カレーランチ</span>
+  </div>
+
+  <div class="max-w-2xl mx-auto">
+
+    <!-- エリア -->
+    <p class="text-hassai-accent font-bold text-xs tracking-[0.3em] mb-4">兵庫県西宮市山口町 ランチ専門店</p>
+
+    <!-- キャッチ -->
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-snug mb-5 text-hassai-sub drop-shadow-sm">
+      懐かしい時間を、<br>
+      <span class="text-hassai-accent">過ごしませんか。</span>
+    </h1>
+
+    <!-- トレイライン -->
+    <div class="tray-line w-36 mx-auto mb-6"></div>
+
+    <p class="text-hassai-muted text-sm sm:text-base leading-relaxed mb-10 max-w-md mx-auto">
+      現役の学校給食調理師がお届けする、あの頃の給食の味。<br>
+      体にやさしく、心があたたまる、毎日来たくなるランチです。
+    </p>
+
+    <!-- CTAボタン -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#cta"
+         class="btn-accent inline-flex items-center justify-center gap-2 px-10 py-4 rounded-full text-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.6.57 1 1 0 011 1V21a1 1 0 01-1 1C10.61 22 2 13.39 2 3a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.6 1 1 0 01-.24 1.01z"/>
+        </svg>
+        今すぐ予約する
+      </a>
+      <a href="#menu"
+         class="btn-outline inline-flex items-center justify-center gap-2 px-10 py-4 rounded-full text-sm">
+        メニューを見る
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+      </a>
+    </div>
+
+    <!-- 小さな補足 -->
+    <p class="text-hassai-muted text-xs mt-8">毎週月曜定休 ／ ランチタイム 11:30〜14:00（売り切れ次第終了）</p>
+  </div>
+</section>
+
+
+<!-- ウェーブ区切り -->
+<div class="overflow-hidden -mt-1" style="line-height:0; background:#F7F3E8">
+  <svg viewBox="0 0 1440 56" preserveAspectRatio="none" style="height:44px; display:block; width:100%">
+    <path d="M0,0 C480,56 960,0 1440,56 L1440,0 Z" fill="#EDE8D8"/>
+  </svg>
+</div>
+
+
+<!-- ====== 2. こだわり ====== -->
+<section id="kodawari" class="py-20 px-4 bg-hassai-bg-alt">
+  <div class="max-w-4xl mx-auto text-center">
+    <span class="section-label">OUR STORY</span>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-2 text-hassai-sub">八彩の、ふたつのこだわり</h2>
+    <div class="tray-line w-28 mx-auto mb-14"></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+
+      <!-- こだわり①: 給食 -->
+      <div class="warm-card p-8 text-left flex flex-col fade-up">
+        <!-- アイコン -->
+        <div class="w-16 h-16 rounded-2xl bg-hassai-main flex items-center justify-center text-3xl mb-6 shadow-md">
+          🍱
+        </div>
+        <h3 class="text-xl font-bold text-hassai-sub mb-2">現役給食調理師の、本物の技と愛情</h3>
+        <div class="accent-bar mb-4"></div>
+        <p class="text-hassai-muted text-sm leading-loose mb-6 flex-1">
+          オーナーは現職の学校給食調理師。毎日子どもたちのために腕をふるってきた、
+          本物の給食の技術と食への愛情をそのままランチに込めています。
+          「栄養バランス」「安全・安心な食材選び」へのこだわりは、お店でも一切妥協しません。
+        </p>
+        <ul class="space-y-2.5 text-sm text-hassai-muted">
+          <li class="check-item">衛生管理は給食現場と同水準</li>
+          <li class="check-item">地元産の新鮮野菜を積極採用</li>
+          <li class="check-item">化学調味料を使わない丁寧な出汁づくり</li>
+          <li class="check-item">アレルギー対応も柔軟に相談可</li>
+        </ul>
+      </div>
+
+      <!-- こだわり②: なつかしさ -->
+      <div class="warm-card p-8 text-left flex flex-col fade-up" style="transition-delay:.13s">
+        <!-- アイコン -->
+        <div class="w-16 h-16 rounded-2xl bg-hassai-accent/20 border border-hassai-accent/30 flex items-center justify-center text-3xl mb-6 shadow-md">
+          📖
+        </div>
+        <h3 class="text-xl font-bold text-hassai-sub mb-2">あの頃の給食が、よみがえる</h3>
+        <div class="accent-bar mb-4" style="background:#A8C3A0"></div>
+        <p class="text-hassai-muted text-sm leading-loose mb-6 flex-1">
+          「給食のカレーの味だ！」「揚げパン、懐かしい！」——
+          食べた瞬間に小学校の教室が思い出される。
+          そんな懐かしさと温かさを、30〜60代の皆さんに届けたい。
+          それが八彩を開いたいちばんの理由です。
+        </p>
+        <ul class="space-y-2.5 text-sm text-hassai-muted">
+          <li class="check-item">昭和〜平成の給食レシピを忠実に再現</li>
+          <li class="check-item">季節の献立で飽きさせない工夫</li>
+          <li class="check-item">ひとりでも、家族でも「ほっ」とできる空間</li>
+          <li class="check-item">思い出の給食メニューのリクエストも歓迎</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ウェーブ区切り（反転） -->
+<div class="overflow-hidden" style="line-height:0; background:#EDE8D8">
+  <svg viewBox="0 0 1440 56" preserveAspectRatio="none" style="height:44px; display:block; width:100%">
+    <path d="M0,56 C480,0 960,56 1440,0 L1440,56 Z" fill="#F7F3E8"/>
+  </svg>
+</div>
+
+
+<!-- ====== 3. メニュー ====== -->
+<section id="menu" class="py-20 px-4 bg-hassai-bg">
+  <div class="max-w-4xl mx-auto text-center">
+    <span class="section-label">LUNCH MENU</span>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-2 text-hassai-sub">ランチメニュー</h2>
+    <p class="text-hassai-muted text-sm mb-2">すべて手作り・日替わり献立でお届けします</p>
+    <div class="tray-line w-28 mx-auto mb-14"></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- メニュー①: おばんざいランチ -->
+      <div class="warm-card overflow-hidden flex flex-col fade-up">
+        <!-- 写真 -->
+        <div class="relative">
+          <img
+            src="https://placehold.co/600x380/A8C3A0/FFF8EE?text=おばんざいランチ"
+            alt="おばんざいランチ"
+            class="w-full aspect-[5/3] object-cover"
+          >
+          <div class="absolute top-4 left-4">
+            <span class="menu-badge">人気 No.1</span>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-hassai-sub/25 to-transparent pointer-events-none"></div>
+        </div>
+
+        <!-- 内容 -->
+        <div class="p-7 flex flex-col flex-1 text-left">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <p class="text-hassai-main text-xs font-bold tracking-widest mb-1">OBANZAI LUNCH</p>
+              <h3 class="text-xl font-bold text-hassai-sub">おばんざいランチ</h3>
+            </div>
+            <div class="text-right shrink-0 ml-3">
+              <p class="text-hassai-muted text-[0.65rem]">税込</p>
+              <p class="text-2xl font-bold text-hassai-accent leading-none">¥980</p>
+            </div>
+          </div>
+
+          <div class="w-full h-px bg-hassai-border mb-4"></div>
+
+          <p class="text-hassai-muted text-sm leading-loose mb-5">
+            給食でおなじみの「おかず」をおばんざいスタイルで。ごはん・お味噌汁・小鉢3種が付いた、
+            体にやさしいバランス献立。日替わりで内容が変わるので、いつ来ても新鮮です。
+          </p>
+
+          <ul class="space-y-2 text-sm text-hassai-muted mb-6 flex-1">
+            <li class="check-item">日替わりおかず 3品</li>
+            <li class="check-item">地元産野菜のお味噌汁</li>
+            <li class="check-item">白ごはん（おかわり1回無料）</li>
+            <li class="check-item">季節の小鉢</li>
+          </ul>
+
+          <!-- 黒板メモ -->
+          <div class="chalkboard px-5 py-3 text-xs text-center">
+            🍀 例）ひじきの煮物・かぼちゃの含め煮・鶏のから揚げ<br>
+            <span class="chalk-sub">※ 献立は週替わりです</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- メニュー②: 給食カレーランチ -->
+      <div class="warm-card overflow-hidden flex flex-col fade-up" style="transition-delay:.14s">
+        <!-- 写真 -->
+        <div class="relative">
+          <img
+            src="https://placehold.co/600x380/D66A3D/FFF8EE?text=給食カレーランチ"
+            alt="給食カレーランチ"
+            class="w-full aspect-[5/3] object-cover"
+          >
+          <div class="absolute top-4 left-4">
+            <span class="menu-badge" style="background:#7A5C43">定番人気</span>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-hassai-sub/25 to-transparent pointer-events-none"></div>
+        </div>
+
+        <!-- 内容 -->
+        <div class="p-7 flex flex-col flex-1 text-left">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <p class="text-hassai-accent text-xs font-bold tracking-widest mb-1">KYUSHOKU CURRY</p>
+              <h3 class="text-xl font-bold text-hassai-sub">給食カレーランチ</h3>
+            </div>
+            <div class="text-right shrink-0 ml-3">
+              <p class="text-hassai-muted text-[0.65rem]">税込</p>
+              <p class="text-2xl font-bold text-hassai-accent leading-none">¥880</p>
+            </div>
+          </div>
+
+          <div class="w-full h-px bg-hassai-border mb-4"></div>
+
+          <p class="text-hassai-muted text-sm leading-loose mb-5">
+            「学校のカレーの味だ！」と思い出すほど懐かしい一杯。じっくり煮込んだ昭和レシピのカレーは
+            スパイスを効かせすぎず、子どもから大人まで食べやすいまろやかな仕上がりです。
+          </p>
+
+          <ul class="space-y-2 text-sm text-hassai-muted mb-6 flex-1">
+            <li class="check-item">昭和レシピ再現の給食カレー</li>
+            <li class="check-item">国産鶏・地元野菜使用</li>
+            <li class="check-item">ごはん大盛り無料</li>
+            <li class="check-item">サラダ・福神漬け付き</li>
+          </ul>
+
+          <!-- 黒板メモ -->
+          <div class="chalkboard px-5 py-3 text-xs text-center">
+            🍛 辛さ控えめの昔ながらのルーで<br>
+            <span class="chalk-sub">お子様連れも安心してどうぞ</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 補足 -->
+    <div class="mt-8 max-w-lg mx-auto bg-hassai-main/10 border border-hassai-main/35 rounded-2xl px-6 py-5 text-sm text-hassai-muted text-left">
+      <p class="flex gap-2 mb-2"><span>🌿</span>アレルギーがある方はご注文前にお声がけください。できる限り対応いたします。</p>
+      <p class="flex gap-2"><span>☕</span>食後のお茶・コーヒーは無料サービスです。ゆっくりお過ごしください。</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ウェーブ区切り -->
+<div class="overflow-hidden" style="line-height:0; background:#F7F3E8">
+  <svg viewBox="0 0 1440 56" preserveAspectRatio="none" style="height:44px; display:block; width:100%">
+    <path d="M0,0 C480,56 960,0 1440,56 L1440,0 Z" fill="#EDE8D8"/>
+  </svg>
+</div>
+
+
+<!-- ====== 4. お客様の声 ====== -->
+<section id="reviews" class="py-20 px-4 bg-hassai-bg-alt">
+  <div class="max-w-4xl mx-auto text-center">
+    <span class="section-label">REVIEWS</span>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-2 text-hassai-sub">お客様の声</h2>
+    <div class="tray-line w-28 mx-auto mb-14"></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+      <!-- レビュー① -->
+      <div class="warm-card p-7 text-left flex flex-col fade-up">
+        <div class="stars text-base mb-4">★★★★★</div>
+        <p class="text-4xl text-hassai-main/40 font-black leading-none mb-2 select-none">"</p>
+        <p class="text-hassai-muted text-sm leading-loose flex-1">
+          給食カレー、最高でした！子どもの頃に食べてたあの味そのまま。
+          思わず「おかわり！」って言いたくなりました。
+          大人になってこんなに食べて笑えるとは思わなかった（笑）。また来ます！
+        </p>
+        <div class="mt-6 pt-5 border-t border-hassai-border flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-hassai-main flex items-center justify-center text-hassai-cream font-bold text-sm shrink-0">T</div>
+          <div>
+            <p class="text-hassai-sub font-bold text-sm">T.K. 様</p>
+            <p class="text-hassai-muted text-xs">50代・男性・会社員</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- レビュー② -->
+      <div class="warm-card p-7 text-left flex flex-col fade-up" style="transition-delay:.1s">
+        <div class="stars text-base mb-4">★★★★★</div>
+        <p class="text-4xl text-hassai-main/40 font-black leading-none mb-2 select-none">"</p>
+        <p class="text-hassai-muted text-sm leading-loose flex-1">
+          おばんざいランチは野菜たっぷりで体に優しい。
+          毎週来ていますがメニューが変わるので飽きません。
+          お味噌汁が特に美味しくて、ほっとします。
+          近所にこんなお店ができて本当に嬉しいです。
+        </p>
+        <div class="mt-6 pt-5 border-t border-hassai-border flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-hassai-accent/60 flex items-center justify-center text-hassai-cream font-bold text-sm shrink-0">M</div>
+          <div>
+            <p class="text-hassai-sub font-bold text-sm">M.Y. 様</p>
+            <p class="text-hassai-muted text-xs">40代・女性・主婦</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- レビュー③ -->
+      <div class="warm-card p-7 text-left flex flex-col fade-up" style="transition-delay:.2s">
+        <div class="stars text-base mb-4">★★★★★</div>
+        <p class="text-4xl text-hassai-main/40 font-black leading-none mb-2 select-none">"</p>
+        <p class="text-hassai-muted text-sm leading-loose flex-1">
+          夫婦ふたりでランチに利用。昔の給食の話で盛り上がって
+          食事よりも話が弾んだくらい（笑）。
+          懐かしい味に心が温かくなります。駐車場もあって来やすいです！
+        </p>
+        <div class="mt-6 pt-5 border-t border-hassai-border flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-hassai-sub flex items-center justify-center text-hassai-cream font-bold text-sm shrink-0">S</div>
+          <div>
+            <p class="text-hassai-sub font-bold text-sm">S.I. 様</p>
+            <p class="text-hassai-muted text-xs">60代・女性・パート</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ウェーブ区切り（反転） -->
+<div class="overflow-hidden" style="line-height:0; background:#EDE8D8">
+  <svg viewBox="0 0 1440 56" preserveAspectRatio="none" style="height:44px; display:block; width:100%">
+    <path d="M0,56 C480,0 960,56 1440,0 L1440,56 Z" fill="#F7F3E8"/>
+  </svg>
+</div>
+
+
+<!-- ====== 5. アクセス・営業時間 ====== -->
+<section id="access" class="py-20 px-4 bg-hassai-bg">
+  <div class="max-w-4xl mx-auto text-center">
+    <span class="section-label">ACCESS & HOURS</span>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-2 text-hassai-sub">アクセス・営業時間</h2>
+    <div class="tray-line w-28 mx-auto mb-14"></div>
+  </div>
+
+  <div class="max-w-4xl mx-auto flex flex-col lg:flex-row gap-8 fade-up">
+
+    <!-- 左: 地図 + 駐車場 -->
+    <div class="w-full lg:w-3/5 flex flex-col gap-4">
+
+      <!-- 地図 -->
+      <div class="rounded-2xl overflow-hidden border border-hassai-border shadow-md">
+        <img
+          src="https://placehold.co/720x420/EDE8D8/7A5C43?text=📍+兵庫県西宮市山口町%0A(Google+Maps+へ差し替え)"
+          alt="店舗地図"
+          class="w-full object-cover"
+        >
+      </div>
+      <p class="text-hassai-muted text-xs text-center">※ 実装時はGoogle Maps埋め込みに差し替えてください</p>
+
+      <!-- 駐車場 -->
+      <div class="warm-card p-6">
+        <h4 class="text-hassai-sub font-bold text-sm mb-4 flex items-center gap-2">
+          <span class="text-hassai-accent">🚗</span>駐車場のご案内
+        </h4>
+        <div class="grid grid-cols-2 gap-3 text-xs">
+          <div class="bg-hassai-bg rounded-xl p-4">
+            <p class="text-hassai-sub font-bold mb-1.5">店舗前駐車場</p>
+            <p class="text-hassai-muted">普通車 5台</p>
+            <p class="text-hassai-accent font-bold text-[0.7rem] mt-1">✦ 無料</p>
+          </div>
+          <div class="bg-hassai-bg rounded-xl p-4">
+            <p class="text-hassai-sub font-bold mb-1.5">近隣提携駐車場</p>
+            <p class="text-hassai-muted">徒歩 2分</p>
+            <p class="text-hassai-accent font-bold text-[0.7rem] mt-1">✦ 無料</p>
+          </div>
+        </div>
+        <p class="text-hassai-muted text-xs mt-3">お車でのご来店も大歓迎です。満車の場合はスタッフにお声がけください。</p>
+      </div>
+
+    </div>
+
+    <!-- 右: 店舗情報 + 営業時間 -->
+    <div class="w-full lg:w-2/5 space-y-4">
+
+      <!-- 店舗情報 -->
+      <div class="warm-card p-7">
+        <h3 class="text-hassai-sub font-bold text-sm mb-5 flex items-center gap-2">
+          <span class="accent-bar inline-block w-4 h-0.5"></span>店舗情報
+        </h3>
+        <dl class="space-y-4 text-sm">
+          <div class="flex gap-4 items-start">
+            <dt class="text-hassai-muted text-xs w-12 shrink-0 pt-0.5">店名</dt>
+            <dd class="text-hassai-sub font-bold leading-snug">給食のじかん 八彩</dd>
+          </div>
+          <div class="flex gap-4 items-start">
+            <dt class="text-hassai-muted text-xs w-12 shrink-0 pt-0.5">住所</dt>
+            <dd class="text-hassai-muted leading-relaxed">
+              〒651-1511<br>
+              兵庫県西宮市山口町〇〇〇<br>
+              ○○ビル 1F
+            </dd>
+          </div>
+          <div class="flex gap-4 items-start">
+            <dt class="text-hassai-muted text-xs w-12 shrink-0 pt-0.5">電話</dt>
+            <dd>
+              <a href="tel:0797000000"
+                 class="text-hassai-accent font-bold text-base hover:text-hassai-accent-dark transition-colors">
+                0797-00-0000
+              </a>
+            </dd>
+          </div>
+          <div class="flex gap-4 items-start">
+            <dt class="text-hassai-muted text-xs w-12 shrink-0 pt-0.5">交通</dt>
+            <dd class="text-hassai-muted text-sm leading-relaxed">
+              神戸電鉄 道場南口駅<br>徒歩 約5分<br>
+              <span class="text-xs">お車でのアクセスも便利です</span>
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- 営業時間 -->
+      <div class="warm-card p-7">
+        <h3 class="text-hassai-sub font-bold text-sm mb-5 flex items-center gap-2">
+          <span class="inline-block w-4 h-0.5 rounded-full bg-hassai-main"></span>営業時間
+        </h3>
+        <div class="space-y-0 text-sm">
+          <div class="hour-row flex justify-between items-center py-3">
+            <span class="text-hassai-muted">火 〜 金</span>
+            <span class="text-hassai-sub font-bold">11:30 〜 14:00</span>
+          </div>
+          <div class="hour-row flex justify-between items-center py-3">
+            <span class="text-hassai-muted">土・日・祝</span>
+            <span class="text-hassai-sub font-bold">11:00 〜 14:30</span>
+          </div>
+          <div class="flex justify-between items-center py-3">
+            <span class="text-hassai-muted">定休日</span>
+            <span class="text-hassai-accent font-bold">毎週月曜日</span>
+          </div>
+        </div>
+        <div class="mt-4 bg-hassai-accent/8 border border-hassai-accent/25 rounded-xl p-3 text-xs text-hassai-muted leading-relaxed">
+          ⚠️ ランチは<strong class="text-hassai-accent">売り切れ次第終了</strong>となります。<br>
+          お早めのご来店をおすすめします。
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== 6. 予約CTA ====== -->
+<section id="cta" class="py-24 px-4 relative overflow-hidden">
+  <!-- 背景グラデーション -->
+  <div class="absolute inset-0 bg-gradient-to-br from-hassai-main to-hassai-main-dark"></div>
+  <!-- ドット装飾 -->
+  <div class="absolute inset-0 dot-pattern opacity-25"></div>
+  <!-- 上下ライン -->
+  <div class="absolute top-0 left-0 right-0 h-1 bg-hassai-accent opacity-70"></div>
+  <div class="absolute bottom-0 left-0 right-0 h-1 bg-hassai-accent opacity-70"></div>
+
+  <div class="relative max-w-2xl mx-auto text-center fade-up">
+
+    <span class="inline-block bg-hassai-accent text-hassai-cream text-[0.6rem] tracking-[0.3em] font-bold px-4 py-1 rounded-full mb-5">
+      RESERVATION
+    </span>
+
+    <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-hassai-cream leading-snug">
+      懐かしい給食の味を、<br>ぜひ味わいにきてください。
+    </h2>
+
+    <div class="tray-line w-24 mx-auto mb-6" style="background:linear-gradient(to right,rgba(255,248,238,0.5),rgba(255,248,238,1),rgba(255,248,238,0.5))"></div>
+
+    <p class="text-hassai-cream/80 text-sm leading-relaxed mb-4">
+      ご予約のお電話・ネット予約でご来店を心よりお待ちしております。<br>
+      団体・貸し切りのご相談もお気軽にどうぞ。
+    </p>
+
+    <!-- 案内バー -->
+    <div class="border border-hassai-cream/30 bg-hassai-cream/10 rounded-xl px-6 py-4 mb-10 text-xs text-hassai-cream/80 flex flex-col sm:flex-row gap-3 justify-center">
+      <span>🍚 売り切れ次第終了</span>
+      <span class="hidden sm:inline opacity-40">|</span>
+      <span>🌿 アレルギー対応可</span>
+      <span class="hidden sm:inline opacity-40">|</span>
+      <span>🚗 無料駐車場完備</span>
+    </div>
+
+    <!-- ボタン群 -->
+    <div class="flex flex-col sm:flex-row gap-5 justify-center">
+
+      <!-- 電話 -->
+      <a href="tel:0797000000"
+         class="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full text-sm font-bold bg-hassai-cream text-hassai-sub hover:bg-white transition-all hover:-translate-y-1 shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-hassai-accent" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.6.57 1 1 0 011 1V21a1 1 0 01-1 1C10.61 22 2 13.39 2 3a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.6 1 1 0 01-.24 1.01z"/>
+        </svg>
+        <span class="text-left leading-snug">
+          電話で予約<br>
+          <span class="font-normal text-xs text-hassai-muted">0797-00-0000</span>
+        </span>
+      </a>
+
+      <!-- ネット予約 -->
+      <a href="#"
+         class="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full text-sm font-bold border-2 border-hassai-cream/70 text-hassai-cream hover:bg-hassai-cream/10 transition-all hover:-translate-y-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        <span class="text-left leading-snug">
+          ネットで予約<br>
+          <span class="font-normal text-xs opacity-70">24時間受付</span>
+        </span>
+      </a>
+
+    </div>
+
+    <p class="text-hassai-cream/55 text-xs mt-8">
+      電話受付：11:00〜14:00（月曜定休）
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ====== フッター ====== -->
+<footer class="bg-hassai-sub py-12 px-4 text-center">
+  <div class="max-w-4xl mx-auto">
+    <!-- ロゴ -->
+    <div class="flex flex-col items-center gap-1 mb-5">
+      <div class="w-10 h-10 rounded-xl bg-hassai-main flex items-center justify-center text-hassai-cream font-black text-lg mb-1">
+        八
+      </div>
+      <span class="text-[0.6rem] tracking-[0.3em] text-hassai-cream/50">KYUSHOKU NO JIKAN</span>
+      <span class="text-base font-bold tracking-wide text-hassai-cream">給食のじかん 八彩</span>
+    </div>
+    <div class="tray-line w-24 mx-auto mb-5"></div>
+    <p class="text-hassai-cream/55 text-xs mb-5">
+      〒651-1511 兵庫県西宮市山口町○○○　TEL: 0797-00-0000
+    </p>
+    <nav class="flex flex-wrap justify-center gap-5 text-xs text-hassai-cream/55 mb-7">
+      <a href="#kodawari" class="hover:text-hassai-cream transition-colors">こだわり</a>
+      <a href="#menu"     class="hover:text-hassai-cream transition-colors">メニュー</a>
+      <a href="#reviews"  class="hover:text-hassai-cream transition-colors">お客様の声</a>
+      <a href="#access"   class="hover:text-hassai-cream transition-colors">アクセス</a>
+      <a href="#cta"      class="hover:text-hassai-cream transition-colors">ご予約</a>
+    </nav>
+    <p class="text-hassai-cream/25 text-xs">&copy; 2024 給食のじかん 八彩. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+<!-- ====== JavaScript ====== -->
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
